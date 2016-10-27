@@ -1,0 +1,2592 @@
+@charset "utf-8";
+$mainWidth:1200px;
+$topNavBorder:#EDEDED;
+@mixin AddBorder($color){
+    border: 1px solid $color;
+}
+//-----topNav Variables&Mixin-------
+$topNavBg:#FAFAFA;
+$topNavHeight:30px;
+$baseGrayColor:#8C8C8C;
+$baseRed:#C81118;
+@mixin topNav_LiLayout{
+    font-size: 12px;
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        float: left;
+        list-style: none;
+    }
+    a{
+        color: $baseGrayColor;
+        &:hover{
+            color: $baseRed;
+            text-decoration: none;
+        }
+    }
+    .topNavLeftLine{
+        padding: 0 10px;
+        color: lighten($baseGrayColor,20%);
+        float: left;
+    }
+}
+@mixin topNav_dropMenu($left:130px){
+    .topNav_dropMenu{
+        display: none;
+        width: 87px;
+        position: absolute;
+        background-color: #fff;
+        padding: 5px;
+        padding-left: 12px;
+        box-sizing: border-box;
+        box-shadow: 0 0 1px $topNavBorder;
+        top: -5px;
+        left: $left;
+        z-index: 2;
+        li{
+            padding-bottom: 5px;
+            &:first-child{
+                margin-bottom: 10px;
+            }
+            display: inline-block;
+        }
+    }
+}
+%arrow {
+    .arrow{
+        width: 7px;
+        height: 4px;
+        background: url(../img/arrowicon.png) no-repeat left top;
+        display: inline-block;
+        margin-left: 8px;
+    }
+};
+//-----topNav Variables&Mixin End-------
+
+//-------searchArea--------
+$searchBox_height:118px;
+$drop_cartCountBg:#FAFAFA;
+@mixin setSearchBox{
+     width: 395px;
+     height: 40px;
+     box-sizing: border-box;
+     border: 1px solid $topNavBorder;
+     outline: none;
+     padding-left: 10px;
+}
+@mixin searchIcon{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 409px;
+    top: 0;
+}
+@mixin ahoverBlack($font-size:12px){
+    a{
+        color: #000;
+        font-size:$font-size; 
+        &:hover{
+            color: $baseRed;
+        }
+    }
+}
+@mixin iptSpt{          
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    top: 10px;
+    font-size: 14px;
+    li{
+        float: left;
+        margin-right: 10px;
+    }
+    a{
+        color: darken($topNavBg,40%);
+        &:hover{
+            text-decoration: none;
+            color: darken($topNavBorder,60%);
+        }
+    };
+}
+@mixin cart_arrow($box:".cart_arrow",$color:$baseRed,$weight:4px,$position:-10px){
+    #{$box}:after{
+         position: absolute;
+         bottom: -4px;
+         width: 0;
+         height: 0;
+         left: 100%;
+         margin-left: $position;
+         content: " ";
+         border-top: $weight solid  $color;
+         border-left: $weight solid transparent ;
+         border-right: $weight solid transparent ;
+    }
+}
+@mixin cartBox{
+    box-sizing: border-box;
+    width: 199px;
+    height: 40px;
+    border: 1px solid $topNavBorder;
+    display: inline-block;
+    right: 0px;
+    position: absolute;
+    .mall,.cart{
+        float: left;
+        width: 49.5%;
+        height: 100%;
+        text-align: center;
+        line-height: 2.8;
+        background: url(../img/mycart_top.png) 83px 18px no-repeat; 
+        background-color: #fff;
+        &:hover{
+            cursor: pointer;
+            height: 102%;
+            background: url(../img/mycart_down.png) 83px 18px no-repeat;
+            background-color: #fff;
+        }
+    }
+    .cartLine{
+        float: left;
+        height: 12px;
+        border-left: 1px solid $topNavBorder;
+        margin-top: 12px;
+    }
+}
+@mixin dropLog{
+    .drop_logbox{
+        p{
+            height: 40px;
+            box-sizing: border-box;
+            padding-top: 12px;
+            text-align: center;
+            border-bottom: 1px solid $topNavBorder;
+        }
+    }
+    .drop_log{          //下拉菜单登录1层
+        margin-left: 7px;
+        .log_line{
+            margin: 0 5px;
+        }
+    }
+    .drop_logUl{        //下拉菜单登录2层
+        padding: 20px;
+        padding-bottom: 5px;
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li{
+                float: left;
+                width: 50%;
+                text-align: center;
+                box-sizing: border-box;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .drop_logAds{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+@mixin commenDrop_layout($width:199px){
+    display: none;
+    position: absolute;
+    width: $width;
+    box-sizing: border-box;
+    border:{
+        left: 1px solid $topNavBorder;
+        right: 1px solid $topNavBorder;
+        bottom: 1px solid $topNavBorder;
+    }
+    top: 39px;
+    font-size: 12px;
+}
+@mixin dropLogBox1{
+    .mall_dropDown{
+        z-index: 2;
+        background-color: #fff;
+        left: -1px;
+        @include commenDrop_layout;
+        
+        @include dropLog;       //下拉登录页样式
+    }
+}
+@mixin dropCartBox2{
+    .drop_cartbox{
+        z-index: 2;
+        background-color: #fff;
+        @include commenDrop_layout(510px);
+        right: -1px;
+        min-height: 110px;
+        border-top: 1px solid $topNavBorder;
+        top: 38px;
+    }
+    .drop_cartInfo{
+        padding: 15px 20px;
+        .col-xs-8{
+            margin-left: -25px;
+            a{
+                padding-top: 5px;
+                padding-bottom: 20px;
+            }
+        }
+        .cartPrice{
+            font-size: 13px;
+            color: darken($topNavBg,40%);
+        }
+        .cart_price{
+            color: $baseRed;
+            font-size: 12px;
+        }
+        .col-xs-1{
+            color: darken($topNavBg,40%);
+            font-size: 30px;
+            height: 30px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    }
+    .drop_cartPrice{
+        background-color: $drop_cartCountBg;
+        padding: 20px;
+        .row{
+            margin: 0;
+        }
+        .drop_cartPay{
+            cursor: pointer;
+            background-color: $baseRed;
+            color: #fff;
+            width: 132px;
+            height: 37px;
+            line-height: 37px;
+            text-align: center;
+            float: right;
+            font-size: 16px;
+            font-family: "微软雅黑";
+            &:hover{
+                background-color: lighten($baseRed,15%);
+            }
+        }
+        p{
+            height: 37px;
+            line-height: 37px;
+            float: left;
+            margin: 0;
+        }
+        .drop_cartCount,.drop_cartMoney{
+            color: $baseRed;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+@mixin qrCode{
+    .qrcodeBox{
+        position: relative;
+        padding-top: 20px;
+        font-size: 12px;
+        padding-left: 73px;
+        img{
+            display: block;
+        }
+        a{
+            color: darken($topNavBorder,60%);
+            &:hover{
+                text-decoration: none;
+                color: darken($topNavBorder,60%);
+            }
+        }
+        .qrcode{
+            display: none;
+            opacity: 0;
+        }
+        .qrcode_control{
+            position: absolute;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            background-color: darken($topNavBorder,50%);
+            border-radius:30px; 
+        }
+        .qrcode_active{
+            background-color: $baseRed;
+        }
+    }
+}
+//------searchArea End--------
+
+//--------nav-------------
+$blackNavBg:#333;
+$navHeight:40px;
+$navAllProducets_width:240px;
+$navNormal_width:116px;
+$navHotIconBg:#FC3784;
+$navNewIconBg:#24CA43;
+$navSideBar_height:448px;
+$navSideBar_hoverBg:#F7F7F7;
+$navSideBarHot_iconBg:#EA7433;
+@mixin hot_newIcon($box,$color){
+    #{$box}{
+        width: 30px;
+        height: 13px;
+        border-radius: 3px;
+        background-color: $color;
+        position: absolute;
+        color: #fff;
+        top: -8px;
+        font-size: 12px;
+        line-height: 13px;
+        right: 13px;
+    }
+    @include cart_arrow($box,$color,4px,-13px)
+}
+//----------nav End---------
+//----------foucs-----------
+$foucsBox_height:448px;
+@mixin foucsBoxContainer($width:1920px,$height:448px){
+    .foucsBoxContainer{
+        position: relative;
+        &>ul{
+            width: $width;
+            height: $height;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{
+                position: absolute;
+                z-index: 0;
+                float: left;
+            }
+        }
+    }
+}
+@mixin foucsControl($boolean:false){
+    .foucsControl{
+        @if $boolean{
+            opacity: 0.6;
+        }
+        width: 15px;
+        height: 15px;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        border-radius: 30px;
+        background-color: lighten($blackNavBg,30%);
+        float: left;
+        margin-right: 5px;
+    }
+    .foucsControlBox{
+        position: absolute;
+        @if($boolean){
+            right: 10px;
+        }
+        bottom: 10px;
+        z-index: 2;
+    }
+    .foucsControl_active{
+        background-color: $baseRed;
+    }
+}
+
+//-------foucs End--------
+//-------middlebox---------
+$middle_topBg:#F5F5F5;
+$middle_topHeight:160px;
+$middle_hotCommand_width:240px;
+$middle_hotCommand_height:320px;
+$middle_gray:#B0B0B0;
+$middle_icon_width:70px;
+$middle_icon_height:18px;
+@mixin middleTop{
+    .middle_top{
+        padding-top: 20px;
+        .middleImg{
+            float: left;
+            padding-left: (1200-(240+312*3))/3#{px};
+            &:hover{        
+                animation: boxshadowMove .3s forwards;
+                @keyframes boxshadowMove{
+                    from{box-shadow:none;}
+                    to{box-shadow: 0px 10px 20px darken($middle_topBg,10%);}
+                }
+            }
+        }
+    }
+    .middle_options{
+        width: $navAllProducets_width;
+        height: $middle_topHeight;
+        background-color: $middle_topBg;
+        float: left;
+        font-size: 12px;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            cursor: pointer;
+            padding-top: 10px;
+            box-sizing: border-box;
+            float: left;
+            text-align: center;
+        }
+        img{
+            display: block;
+            margin: auto;
+        }
+        a{
+            color: lighten($blackNavBg,20%);
+            &:hover{
+                color: $blackNavBg;
+                text-decoration: none;
+            }
+        }
+    }
+}
+@mixin proInfo($boolean:true){
+    .productContainer{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .titlebox{
+            position: absolute;
+            bottom: 15px;
+        }
+        img{
+            display: block;
+            margin: 0px auto 25px auto;
+            padding-top: 45px;
+        }
+        .title{
+            text-align: center;
+            color: $blackNavBg;
+            font-size: 14px;
+        }
+        .supTitle{
+            font-size: 12px;
+            text-align: center;
+            color: $middle_gray;
+        }
+        .proPrice{
+            text-align: center;
+            color: $baseRed;
+        }
+        @if($boolean){
+            &:hover img{
+                animation: imgLarger 0.3s forwards;
+            }
+            @keyframes imgLarger{
+                from{width: 146px;}
+                to{width: 155px;}
+            }  
+        }
+    }
+}
+@mixin outerBox($width,$height,$boolean:true){
+    .commandBox{
+        @if($boolean){
+            border:{
+                top: 1px solid lighten($middle_gray,20%);
+                bottom: 1px solid lighten($middle_gray,20%);
+                left: 1px solid lighten($middle_gray,20%);
+            };  
+        }
+        box-sizing: border-box;
+        float: left;
+        width: $width;
+        height: $height;
+        a:hover{
+            text-decoration: none;
+        }
+        .proIcon{
+            font-size: 12px;
+            color: #FFF;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            width: $middle_icon_width;
+            height: $middle_icon_height;
+        }
+    }
+}
+@mixin hotCommand($width:$middle_hotCommand_width,$height:$middle_hotCommand_height,$boolean1:true,$boolean2:true){
+    padding-top: 35px;
+    padding-bottom: 30px;
+    &>p{
+        font-size: 24px;
+        font-family:"微软雅黑";
+    }
+    @include outerBox($width,$height,$boolean1);      //设置外层包裹盒子大小的函数
+    @include proInfo($boolean2);           //设置内容样式的函数,布尔值为真则有动画效果
+}
+@mixin middleFoucs{
+    .middleFoucs{
+        position: relative;
+        @include foucsBoxContainer(1200px,110px);
+        @include foucsControl(true);
+    }
+}
+//-------middlebox End------
+//------infoContainerBox-----
+$infoContainerBg:#F5F5F5;
+@mixin BlockOut{
+    &:hover{
+        position: relative;
+        animation: blockOut .3s forwards;
+    }
+    @keyframes blockOut{
+        from{top: 0px;box-shadow: none;}
+        to{top: -3px;box-shadow: 0px 10px 30px darken($middle_topBg,10%);}
+    }
+}
+@mixin infoStyle{
+    .infoBlock{
+        padding-top: 35px;
+    }
+    .titleBox{
+        p{
+            float: left;
+            font-size: 24px;
+            margin-right: 35px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 8px;
+            display: inline-block;
+        }
+        .more{
+            float: right;
+            li{
+                border: 0;
+                width: 93px;
+                text-align: center;
+                padding: 0;
+                background: url(../img/infoMore_Icon.PNG) left center no-repeat;
+            }
+        }
+        li{
+            font-size: 12px;
+            float: left;
+            padding: 0px 10px;
+            border-right: 1px solid lighten($baseGrayColor,30%);
+        }
+        a{
+            color: $baseGrayColor;
+            &:hover{
+                text-decoration: none;
+                color: $baseRed;
+            }
+        }
+    }
+    .infobox_left{
+        width: 232px;
+        height: 570px;
+        float: left;
+        img{
+            @include BlockOut;
+        }
+    }
+    .infobox_right{
+        width: (1200-232)#{px};
+        float: left;
+        @include hotCommand(232px,280px,false,false);
+        padding: 0;
+        .titlebox{
+            bottom: 5px !important;
+        }
+        .commandBox{
+            background-color: #fff;
+            @include BlockOut;
+        }
+    }
+    .infoImgBox{
+        width: $mainWidth;
+        padding: 50px 0 40px 0;
+        margin: auto;
+    }
+}
+//----infoContainerBox End----
+//------fixedbox-------
+$fixedbox_width:48px;
+$fixedbox_height:170px;
+$fixedButton_height:48px;
+@mixin fixedBox{
+    .fixedbox{
+    width: $fixedbox_width;
+    height: $fixedbox_height;
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    top: 300px;
+    div{
+        position: absolute;
+        width: $fixedbox_width;
+        height: $fixedButton_height;
+        cursor: pointer;
+    }
+    .top{
+        display: none;
+        opacity: 0;
+        background: url(../img/topIcon.PNG) left top no-repeat;
+        &:hover{
+            background: url(../img/topIcon_active.PNG) left top no-repeat;
+        }
+    }
+    .advice{
+        background: url(../img/adviceIcon.png) left top no-repeat;
+        &:hover{
+            background: url(../img/adviceIcon_active.PNG) left top no-repeat;
+        }
+    }
+    .service{
+        background: url(../img/serviceIcon.png) left top no-repeat;
+        &:hover{
+            background: url(../img/serviceIcon_active.png) left top no-repeat;
+        }
+    }
+}
+}
+//-----fixedbox End----
+//-------foot------
+$footTop_height:80px;
+$footTop_borderColor:#E5E5E5;
+$footTop_fontColor:#666;
+$footMiddle_height:225px;
+$footMiddle_grayColor:#B0B0B0;
+@mixin footAHover{
+    a{
+        color: $footTop_fontColor;
+        &:hover{
+            color: $baseRed;
+        }
+    }
+}
+//-------foot End-----
+
+//-------hoverSideBar------
+@mixin hoverSideBar{
+    .allProducts{           
+        background: url(../img/listDownIcon.PNG) 220px center no-repeat;
+    }
+    .sideBarBox{
+        display: none;
+    }
+
+}
+//-------hoversideBar End------
+
+//-------listContainer----
+$listBorderColor:#DEDEDE;
+$listFontBlack:#333;
+$listFontGray:#999;
+@mixin location{
+    .location{
+        font-size: 12px;
+        padding: 12px 0;
+        @include ahoverBlack;
+        span{
+            padding: 0 10px;
+        }
+        p{
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+@mixin ahoverGray($font-size:12px){
+    a{
+        color: #999;
+        font-size:$font-size; 
+        &:hover{
+            color: $baseRed;
+        }
+    }
+}
+@mixin classify{
+    .classify{
+        width: $mainWidth;
+        margin: auto;
+        height: 50px;
+        padding: 15px 0 15px 50px;
+        box-sizing: border-box;
+        border: 1px solid $listBorderColor;
+        dt{
+            font-weight: normal;
+            float: left;
+            padding-right: 10px;
+        }
+        dd{
+            float: left;
+            padding-right: 15px;
+            a{
+                color: $listFontGray;
+                display: inline-block;
+                &:hover{
+                    text-decoration: none;
+                    color: $listFontBlack;
+                }
+            }
+        }
+    }
+}
+@mixin listBlock{
+    .infoBlock{
+        margin-top: 20px;
+        width: 224px;
+        border: 1px solid $listBorderColor;
+        float: left;
+        &:hover{
+            border: 1px solid $baseRed;
+        }
+        .redFont{
+            color: $baseRed;
+        }
+        .infoButtonBox{
+            div{
+                width: 50%;
+                height: 31px;
+                box-sizing: border-box;
+                line-height: 31px;
+                text-align: center;
+                border-top: 1px solid $listBorderColor;
+                float: left;
+            }
+            .buy{
+                color: $baseRed;
+                cursor: pointer;
+                border-right: 1px solid $listBorderColor;
+                &:hover{
+                    background-color: $baseRed;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+@mixin pagesContainer{
+    .pagesContainer{
+        div,a{
+            margin-left: 8px;
+        }
+        float: right;
+        padding: 40px 0;
+        .pagesChange{
+            border: 1px solid $listBorderColor;
+            box-sizing: border-box;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            &:hover{
+                border: 1px solid darken($listBorderColor,10%);
+            }
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            list-style: none;
+            a{
+                float: left;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                text-decoration: none;
+                &:first-child{
+                    color: $baseRed;
+                }
+            }
+        }
+        li{
+            padding: 0;
+        }
+        @include ahoverBlack;
+    }
+}
+//-----listContainer End-----
+                            
+//                          Details!!!!
+//------head---------
+$details_borderColor:#DEDEDE;
+$details_headLeftWidth:542px;
+$details_thubmBorder:#B2B2B2;
+$details_hoverBlueColor: #3268CC;
+$details_thumbsBoxWidth:480px;
+$details_borderPink:#EB8D91;
+@mixin canIBuyIt{
+    .canIbuyIt{
+        padding-top: 15px;
+        .yourChoice{
+            display: inline-block;
+           color: $baseRed;
+        }
+        .buttonBox{
+            padding-top: 12px;
+        }
+        .buttonBox div{
+            display: none;
+            width: 190px;
+            height: 42px;
+            &:hover{
+                cursor: pointer;
+                opacity: 0.75;
+            }
+        }
+        .getMeKonwn{
+            background: url(../img/getMeKonwn.png) left top no-repeat;
+        }
+        .addCartBtn{
+            background: url(../img/addCartBtm.png) left top no-repeat;
+        }
+        .buyItNow{
+            background: url(../img/buyItNowBtn.png) left top no-repeat;
+        }
+        .joinPurchase{
+            background: url(../img/joinPurchase.png) left top no-repeat;
+        }
+        .expri{
+            display: none;
+        }
+        .expri a{
+            display: inline-block;
+            vertical-align: bottom;
+            margin-left: 11px;
+        }
+    }
+}
+@mixin checkBox{
+    .checkBox{
+        li{
+            padding: 0 8px;
+            height: 26px;
+            border: 1px solid $details_thubmBorder;
+            &:hover{
+                border-color: darken($details_thubmBorder,20%);
+            }
+            line-height:26px;
+            text-align: center;
+        }
+        .lack{
+            color: $details_thubmBorder;
+        }
+        .serv{
+            position: relative;
+            li{
+                background: url(../img/servIcon_down.PNG) 280px center no-repeat;
+                padding-right: 20px;
+                &:hover{
+                    background: url(../img/servIcon_Up.PNG) 280px center no-repeat;
+                }
+            }
+            .safeBox{
+                display: none;
+                position: absolute;
+                left: 0px;
+                top: 25px;
+                background: none;
+                background-color: #fff;
+                &:hover{
+                    background: none;
+                    background-color: #fff;
+                }
+            }
+        }
+        .detailsLink{
+            color: $details_hoverBlueColor;
+            vertical-align: super;
+        }
+    }
+}
+@mixin basicHead_bottom{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    border-top: 1px solid $details_borderColor;
+    @include commonMiddleStyle;             //通用左边标题信息样式
+//  -----给标题右边的信息框添加样式----
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: inline-block;
+    }
+    li{
+        float: left;
+        margin-right: 10px;
+        &:hover img{
+            border-color: darken($details_thubmBorder,20%);
+        }
+    }
+    .middle_info a{
+        color: #333;
+        text-decoration: none;
+        &:hover,&:active,&:visited{
+            text-decoration: none;
+        }
+        p{
+            text-align: center;
+        }
+    }
+    img{
+        border: 1px solid $details_thubmBorder;     
+    }
+    span{
+        vertical-align: middle;
+    }
+    @include leftBottom_icon;       //选中样式
+}
+@mixin head_middle{
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    @include qrcodePhone;           //二维码的样式
+    .redFont{
+        &>span{
+            vertical-align: top;
+        }
+        color: $baseRed;
+        a{
+            color:$baseRed;
+        }
+        .middle_info span{
+            display: block;
+        }
+    }
+    @include commonMiddleStyle;         //规定了headRight_middle中的第一层盒子每个盒子的上边距及每个内容盒子为inline-block
+    .middle_info{
+        .price{
+            font-size: 20px;
+            color: $baseRed;
+        }
+        .stars{
+            display: inline-block;
+            height: 12px;
+            background: url(../img/headRight_stars.png) left center repeat-x;
+        }
+        .comment{
+            a{
+                color: #333;
+                &:hover{
+                    color: #333;
+                }
+            }
+        }
+        .change a{
+            color: red;
+            &:hover{
+                text-decoration:none;
+                border-bottom: 1px solid #333;
+            }
+        }
+        .bloodRed{
+            color: red;
+        }
+    }
+}
+@mixin headRightTitle{
+    padding-top: 32px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $details_borderColor;
+    .title{
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+    }
+    .subtitle{
+        color: $baseRed;
+        font-size: 16px;
+    }
+}
+@mixin basicHeadRight{
+    float: left;
+    font-size: 12px;
+    min-height: 687px;
+    width: 1198-$details_headLeftWidth;
+    &>div{
+        padding: 0 30px;
+    }
+    p{
+        margin: 0;
+        padding: 0;
+    }
+    span{
+        display: inline-block;
+    }
+}
+@mixin leftBottom_icon{             //点击时图片左下角的小对钩icon
+    .leftBottom_icon{
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        background: url(../img/leftBottom_icon.png) left top no-repeat;
+        width: 10px;
+        height: 10px;
+    }
+}
+@mixin commonMiddleStyle{
+    &>div{
+        margin-top: 8px;
+    }
+    .middle_info div{
+        display: inline-block; 
+    }
+}
+@mixin qrcodePhone{
+    .qrcodeBuy{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding-right: 21px;
+        height: 13px;
+        vertical-align: top;
+        background: url(../img/qrcodeBuy.png) right top no-repeat;
+        .qrcodePhone{
+            background: url(../img/qrcode.png) left top no-repeat;
+            width: 136px;
+            height: 140px;
+            position: absolute;
+            bottom: 32px;
+            right: -46px;
+            display: none;
+            border: 1px solid $details_borderColor;
+            .triangle{
+                position: absolute;
+                width: 0;
+                height: 0;
+                bottom: -11px;
+                left: 53px;
+                border-left:10px solid transparent;
+                border-right:10px solid transparent;
+                border-top:10px solid $details_borderColor;
+            }
+        }
+    }
+}
+@mixin warpStyle{
+    .warp{
+        width: $details_thumbsBoxWidth;
+        height: $details_thumbsBoxWidth;
+        margin: 45px auto;
+        position: relative;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+        }
+        li{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+@mixin moveBox{
+    .moveBox{
+        display: none;
+        opacity: 0;
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        border: 1px solid $details_borderColor;
+        background-color: #fff;
+        &:hover{
+            cursor: move;
+        }
+    }
+}
+@mixin showBox{
+    .showBox{
+        opacity: 0;
+        display: none;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        border: 2px solid darken($details_borderColor,20%);
+        right: -400px;
+        top: 45px; 
+        z-index: 100;
+    }
+}
+@mixin thumbBox{
+    .thumbsBox{
+        width: $details_thumbsBoxWidth;
+        margin: auto;
+        padding: 30px 36px;
+        position: relative;
+        .controlLeft{
+            width: 12px;
+            height: 70px;
+            position: absolute;
+            left: 0px;
+            top: 23px;
+            background: url(../img/controlLeft.PNG) left top no-repeat;
+            display: inline-block;
+            &:hover{
+                cursor: pointer;
+                background: url(../img/controlLeft_active.png);
+            }
+        }
+        .controlRight{
+            width: 12px;
+            height: 70px;
+            position: absolute;
+            right: 0px;
+            top: 23px;
+            background: url(../img/controlRight.png) left top no-repeat;
+            display: inline-block;
+            &:hover{
+                cursor: pointer;
+                background: url(../img/controlRight_active.png);
+            }
+        }
+        .thumbsContainer{
+            overflow: hidden;
+            position: relative;
+            height: 57px;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: relative;
+        }
+        li{
+            float: left;
+            width: 55px;
+            height: 55px;
+            position: absolute;
+            top: 0;
+            cursor: pointer;
+            border: 1px solid $details_borderColor;
+            .redBorder{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 55px;
+                height: 55px;
+                border: 3px solid $details_borderPink;
+            }
+        }
+        img{
+            width: 100%;
+        }
+    }
+}
+//------head End------
+
+//-----info------
+$infoLeft_width:240px;
+$infoRight_width:940px;
+//--infoLeft--
+$infoLeft_hotTitleBgColor:#F7F7F7;
+$infoLeft_infoHeight:82px;
+$infoLeft_BlackFontColor:#666;
+@mixin hotInfo{
+    .hotInfo{
+        width: 135px;
+        height: 60px;
+        float: right;
+        font-size: 12px;
+        p{
+            margin-bottom: 0;
+        }
+        a{
+           color: $infoLeft_BlackFontColor; 
+        }
+        .redFont{
+            color: $baseRed;
+        }
+    }
+}
+@mixin hotInfoArrow{
+    .countArrow{
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-right: 23px solid transparent;
+        div{
+            position: absolute;
+            top: -25px;
+            left: 2px;
+            font-size: 12px;
+            color: #fff;
+        }
+    }
+}
+//--infoLeft End--
+//--infoRight---
+//-----tab1Style---
+@mixin tab1Style{
+    .list1Container{
+        width: 750px;
+        margin: auto;
+    }
+    .redFont{
+        margin-top: 10px;
+        font-size: 14px;
+        color: red;
+        margin-bottom: 30px;
+    }
+    .listText{
+        font-size: 12px;
+        text-indent: 2em;
+    }
+}
+//---tab1Style End---
+//---Tab2Style---
+$commentTitle_height:108px;
+$commentTitle_LeftWidth:150px;
+$commentTitle_FontColor:#888;
+$commentInfo_BlockHeight:140px;
+@mixin tab2Style{
+    .list2Container{
+        font-size: 12px;
+        .commentTitle{              //上方评分部分的样式
+            height: $commentTitle_height;
+            border-bottom: 1px solid $details_borderColor;
+            .commentTitleLeft{
+                float: left;
+                height: $commentTitle_height;
+                width: $commentTitle_LeftWidth;
+                text-align: center;
+            }
+            .point{
+                padding-top: 8px;
+                color: $baseRed;
+                font-size: 48px;
+                margin: 0;
+                span{
+                    font-size: 18px;
+                }
+            }
+            .commentTitleRight{
+                width: (938-$commentTitle_LeftWidth)px;
+                float: left;
+                @include commentTabsStyle;      //定义后面小标签的样式
+            }
+        }
+        .commentInfo{                       //中部主体信息部分的样式
+            .commentBlock{                      //信息容器盒子的样式
+                padding: {
+                    top: 25px;
+                    left: 25px;
+                    right: 25px;
+                };
+            }
+            .blockLeft{                 //信息块左侧头像区
+                width: 54px;
+                display: inline-block;
+                height: $commentInfo_BlockHeight;
+                text-align: center;
+                margin-right: 20px;
+                img{
+                    width: 48px;
+                    border: 1px solid $details_borderColor;
+                }
+                p{
+                    margin-top: 5px;
+                }
+                .vip2Icon{
+                    background: url(../img/VIP2.png) left top no-repeat;
+                    width: 16px;
+                    height: 16px;
+                    top: 35px;
+                    left: -3px;
+                    position: absolute;
+                }
+            }
+            .blockRight{                //信息块右侧内容区
+                display: inline-block;
+                width: 795px;
+                vertical-align: top;
+                .starsBox{
+                    float: left;
+                    background: url(../img/headRight_stars.png) left center repeat-x;
+                    height: 12px;
+                    width: 75px;
+                    margin-top: 2px;
+                }
+                .influenBox{
+                    float: left;                    
+                    @include commentTabsStyle;      //定义后面小标签的样式
+                    .influen{
+                        padding-top: 0;
+                    } 
+                }
+                .time{
+                    float: right;
+                    color: lighten($commentTitle_FontColor,20%);
+                }
+                .blockComment{
+                    padding-top: 10px;
+                    box-sizing: border-box;
+                    min-height: 70px;
+                    border-bottom: 1px dashed $details_borderColor;
+                }
+                .blockReply{
+                    min-height: 50px;
+                    box-sizing: border-box;
+                    border-bottom: 1px solid $details_borderColor;
+                    padding: 15px 0 20px 0;
+                    span{
+                        color: $baseRed;
+                    }
+                    color: lighten($commentTitle_FontColor,20%);
+                }
+            }
+            .pagesBox{                          //信息块底部翻页区
+                padding-right: 41px;
+                @include pagesContainer;            //翻页小列表的样式
+            }
+        }
+    }
+}
+@mixin commentTabsStyle{
+    .influen{
+        padding-top: 25px;
+        color: $commentTitle_FontColor;
+    }
+    .influenTetx{
+        display: inline-block;
+        padding: 2px 10px;
+        background:lighten($commentTitle_FontColor,43%) ;
+        margin-left: 10px;
+        .count{
+            color: lighten($commentTitle_FontColor,25%);
+        }
+    }
+}
+//---Tab2Style---
+//---tab3Style--
+@mixin tab3Style{
+    .list3Container{
+        padding: 0 43px 30px 43px;
+        font-family: "微软雅黑";
+        .parameterBox{
+            padding-top: 40px;
+        }
+        .parTitle{
+            font-weight: bold;
+            font-size: 16px;
+            border-bottom: 1px solid $details_borderColor;
+        }
+        .parDetails{
+            font-size: 13px;
+            font-family: "微软雅黑";
+            padding-top: 10px;
+        }
+        .parDetailsTitle{
+            vertical-align: top;
+            text-indent: 2px;
+            display: inline-block;
+            width: 142px;
+        }
+        .parDetailsText{
+            width: 705px;
+            display: inline-block;
+        }
+    }
+}
+//---tab3Style End---
+//---tab4Style---
+@mixin tab4Style{
+    .list4Container{
+        padding: 30px 43px;
+        font-size: 13px;
+        font-family: "微软雅黑";
+    }
+}
+//---tab4Style End---
+//---tab5Style---
+@mixin tab5Style{
+    .list5Container{
+        padding: 30px 43px;
+        font-size: 13px;
+        font-family: "微软雅黑";
+    }
+}
+//---tab5Style End---
+//---infoRight End---
+//---consult---
+@mixin consultTitle{
+    .listTitle{
+        a{
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: #333;
+        }
+    }
+}
+@mixin consultStyle{
+    .tipsTitle{                         //头部温馨提示
+        padding: 20px;
+        font-size: 12px;
+        border-bottom: 1px solid $details_borderColor;
+        span{
+            color: $consultOrangeColor;
+        }
+    }
+    .infoBlockContainer{                //内容区容器
+        font-size: 12px;
+        padding: 0px 25px;
+        .infoNull{
+            padding: 60px 0;
+            text-align: center;
+        }
+        .pageChangesBox{
+            @include pagesContainer;            //翻页小列表的样式
+        }
+        .commentCount{
+            float:left;
+            padding-top: 40px;
+            span{
+                margin: 0 5px;
+                font-size: 18px;
+                font-weight: bold;
+                color: $consultOrangeColor;
+            }
+        }
+    }
+    .infoBlock{
+        padding: 18px 0;
+        border-bottom: 1px solid $details_borderColor;
+    }
+    .titleContainer{                    //回复块标题行
+        .user{
+            padding-right: 23px;
+            margin-right: 10px;
+        }
+    }
+    .titleContainer>div{
+        display: inline-block;
+        color: $consultGrayFontColor;
+    }
+    .consultContainer{                  //回复块咨询行
+        padding-top: 8px;
+        padding-bottom: 13px;
+    }
+    .replyContainer{                    //回复块回复行
+        color: $consultOrangeColor;
+        .reply{
+            width: 710px;
+            float: left;
+        }
+        .replyTime{
+            color: $consultGrayFontColor;
+            float: right;
+        }
+    }
+    .vip0{                          //两个图标的背景图片
+        background: url(../img/consultVip0.PNG) right center no-repeat;
+    }
+    .vip2{
+        background: url(../img/VIP2.png) right center no-repeat;
+    }
+}
+//---consult End---
+//---announce---
+@mixin announceStyle{
+    .announceTitle{                     //咨询头部
+        height: 42px;
+        line-height: 42px;
+        background-color: $announceBgColor;
+        color: #333;
+        text-align: center;
+        border-bottom: 1px solid $details_borderColor;
+    }
+    .announceInfoContainer{             //咨询信息部分
+        font-size: 12px;
+        padding: 15px 20px 20px 20px;
+        .annuounceTop{
+            padding-bottom: 15px;
+            border-bottom: 1px solid $details_borderColor;
+        }
+        .cosultType{
+            padding: 20px 0;
+            input{
+                vertical-align: middle;
+                margin: 0;
+            }
+            label{
+                margin-left: 15px;
+            }
+            span{
+                font-weight: lighter;
+                margin-left: 5px;
+            }
+        }
+        .textArea{
+            height: 130px;
+            textarea{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .checkBox{
+            padding-top: 8px;
+            padding-bottom: 20px;
+            input{
+                vertical-align: middle;
+                margin: 0;
+            }
+            span{
+                font-weight: lighter;
+                margin-left: 5px;
+            }
+        }
+        .submitBtn{
+            button{
+                width: 98px;
+                height: 35px;
+                line-height: 35px;
+                vertical-align: center;
+                border: 1px solid $details_borderColor;
+                background-color: lighten($details_borderColor,10%);
+                outline: none;
+            }
+            span{
+                display: none;
+                color: $baseRed;
+                margin-left: 20px;
+            }
+        }
+    }
+}
+//---announce End---
+//-----listStyle---
+$listTitleBgColor:#F7F7F7;
+@mixin tabListStyle{
+    .listContainer{
+        border: 1px solid $details_borderColor;
+        .listTitle{
+            ul{
+                font-family: "微软雅黑";
+                margin: 0;
+                padding: 0;
+                background-color: $listTitleBgColor;
+                list-style: none;
+                border-bottom: 1px solid $details_borderColor;
+            }
+            li{
+                position: relative;
+                float: left;
+                height: 49px;
+                box-sizing: border-box;
+                padding: 15px 25px;
+                border-right: 1px solid $details_borderColor;
+                background-color:#fff;
+                &:hover{
+                    cursor: pointer;
+                    color: $baseRed;
+                }
+        }
+            .redLineTop{
+                position: absolute;
+                top: 0px;
+                left: 0;
+                background-color: $baseRed;
+            }
+            .whiteLineBtm{
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                background: #fff;
+            }
+        }
+        .listInfoBox{
+            width: 100%;
+            .listInfo{
+                display: none;
+                width: 100%;
+            }
+        }
+    }
+}
+//----listyStyle End---
+
+//----consult-----
+$consultOrangeColor:#EC6909;
+$consultGrayFontColor:#999;
+//----consult End----
+
+//---announce---
+$announceBgColor:#F7F7F7;
+//---announce End---
+//------info End---
+
+//---reg---
+//---regHead---
+$regWidth:1000px;
+$regHeadBg:#333;
+$regHeadHeight:67px;
+$regContainerBg:#F7F7F7;
+$regTitleWidth:145px;
+$regTitleHeight:32px;
+$regUnchosenBg:#999;
+$regChosenBg:#EB1C24;
+$regBorderColor:#E0E0E0;
+$regFontColorGray:#999;
+$regIptWidth:161px;
+$regIptHeight:34px;
+$identifyingCodeBg:#F2F2F2;
+$regABlueColor:#00C0F4;
+@mixin regLogo{
+    .regLogoBox{
+        width:$mainWidth;
+        margin: auto;
+        height: $regHeadHeight;
+        line-height: $regHeadHeight;
+        padding-left: 165px;
+        background: url(../img/logo2.png) left center no-repeat;
+        span{
+            margin: 0 7px;
+            display: inline-block;
+        }
+        span:last-child{
+            vertical-align: middle;
+            padding-top: 3px;
+        }
+    }
+}
+//---regHead End---
+//-----regTitle---
+@mixin regTitle{
+    .regTitle>div{
+        padding-top: 7px;
+        text-align: center;
+        width: $regTitleWidth;
+        height: $regTitleHeight;
+        display: inline-block;
+        margin-right: 4px;
+        box-sizing: border-box;
+    }
+    .phoneNum{
+        background: url(../img/phoneIcon.png) 12px center no-repeat;
+        background-color: $regChosenBg;
+        a{
+            color: #fff;
+        }
+        cursor:pointer;
+    }
+    .email{
+        background: url(../img/mailIcon.png) 12px center no-repeat;
+        background-color: $regUnchosenBg;
+        a{
+            color: #fff;
+        }
+        cursor:pointer;
+    }
+    .log{
+        float: right;
+        a{
+            color: $baseRed;
+        }
+    }
+}
+//---regTitle End---
+//---regInfoBlock---
+@mixin regInfoBlock{
+    .regInfoBlock{
+        .blockTitle{                    //信息层头部样式
+            color: #333;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .regInfoLine{                   //每个信息块顶部25px间距
+            margin-top: 25px;
+        }
+        .infoBlockTips{                 //信息块sub标题
+            margin: 0;
+            a{
+                color: $regABlueColor;
+                text-decoration: underline;
+            }
+        }
+        .regInfoLine>div{
+            display: inline-block;          //每层信息块的内容都是inline-block
+        }
+        .lineLeft{                          //信息块左侧样式（手机号、验证码等）
+            width: 140px;
+            float: left;
+            height: $regIptHeight;
+            line-height: $regIptHeight;
+            vertical-align: text-bottom;
+        }
+        .lineRight{                         //信息块右侧样式（需要填写的表单信息）
+            width: 335px;
+            &>*:first-child{
+                float: left;
+            }
+            &>*:last-child{
+                float: right;
+            }
+            div{                            //div统一样式
+                display: inline-block;
+                height: $regIptHeight;
+                line-height: $regIptHeight;
+                border: 1px solid $regBorderColor;
+                color: #333;
+                box-sizing: border-box;
+            }
+            input{                          //input统一样式
+                outline: none; 
+                width: $regIptWidth;
+                padding-left: 15px;
+                height: $regIptHeight;
+                border: 1px solid $regBorderColor;
+                color: #333;
+            }
+            .area{                                  //手机区号盒子单独修饰
+                position: relative;
+                width: $regIptWidth;
+                padding-left: 10px;
+                background: url(../img/regDownArrow.png) 135px center no-repeat;
+            }
+            .identifyingCode{                       //验证码盒子单独修饰
+                color: #333;
+                width: $regIptWidth;
+                text-align: center;
+                background-color: $identifyingCodeBg;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            .password,.confirm,.Email,#password,#confirm,#Email{        //这些input占整个宽度单独修饰
+                width: 100%;
+            }
+            .Phonenum{
+                float:right;
+            }
+            .Email{                                         //选择类型Email框显示，默认隐藏
+                display: none;
+            }
+            .passWordstrength{                      //密码强度样式
+                margin-top: 3px;
+                border: none;
+                height: auto;
+                float: left;
+                .strength{
+                    width: 80px;
+                    height: 16px;
+                    border: none;
+                    line-height: 14px;
+                    text-align: center;
+                    color: $regFontColorGray;
+                    float: left;
+                    margin-right: 1px;
+                    background-color: $regContainerBg;
+                }
+            }
+        }
+    }
+}
+@mixin submitBtn{
+    .btnContainer{
+        text-align: center;
+        border-bottom: none;
+    }
+    .regBtnSpan{
+        display: inline-block;
+        .regbtn{
+            width: 277px;
+            height: 43px;
+            color: #fff;
+            line-height: 43px;
+            border: 1px solid $regBorderColor;
+            background-color: $baseRed;
+            display: block;
+            outline: none;
+        }
+    }
+}
+//---regInfoBlock End---
+//---regfooter---
+@mixin regfooter{
+    .regFooter{
+        padding-top: 30px;
+        width: $regWidth;
+        margin: auto;
+        margin-top: 30px;
+        text-align: center;
+        border-top: 1px solid $regBorderColor;
+        div:last-child{
+            color: $regFontColorGray;
+            font-size: 12px;
+            margin-top: 10px;
+            padding-bottom: 35px;
+        }
+        span{
+            margin: 0 10px;
+            font-size: 16px;
+            color: $regFontColorGray;
+        }
+        a{
+            color: $regFontColorGray;
+            text-decoration: underline;
+        }
+        a:first-child{
+            margin-right: 10px;
+        }
+    }
+}
+//---regfooter End---
+//---reg End---
+
+//---personnalCenter---
+$personalLeft_width:240px;
+$personalLeft_height:770px;
+$personalLeft_Bg:#FAFAFA;
+$personalRight_width:940px;
+//---personalLeft---
+$personalLeftBlockBorderColor:#DEDFDE;
+$personalLeftBlockFontColor:#888;
+@mixin personalLeftStyle{
+    width: $personalLeft_width;
+    height: $personalLeft_height;
+    background: $personalLeft_Bg;
+    float: left;
+    padding: 25px 30px;
+    box-sizing: border-box;
+    .personalLeftTitle{                 //“我的商城”样式
+        color:  #333;
+        margin-bottom: 40px;
+        font-size: 18px;
+    }
+    .personalBlock{                 //每个块下间距30px
+        margin-bottom: 30px;
+    }
+    .blockTitle{                    //每个信息块标题部分样式
+        border-top: 1px solid $personalLeftBlockBorderColor;
+        text-align: center;
+        height: 0px;
+        margin-bottom: 25px;
+        span{
+            position: relative;
+            top: -11px;
+            padding: 0 10px;
+            background-color: $personalLeft_Bg;
+            color: $personalLeftBlockFontColor;
+        }
+    }
+    .blockList{                     //每个信息块列表部分样式
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            display: inline-block;
+        }
+        a{
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            color: #333;
+            &:hover{
+                animation: turnRed 0.3s forwards; 
+                @keyframes turnRed{
+                    from{
+                        color: #333;
+                    }
+                    to{
+                        color: $baseRed;
+                    }
+                }
+            }
+        }
+        .num{                           //后面数字小尾巴的样式
+            width: 14px;
+            height: 14px;
+            line-height: 14px;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            background-color: $baseRed;
+            border-radius: 10px;
+            top: 4px;
+            right: -23px;
+            font-size: 12px;
+        }
+    }
+}
+//---personalLeft End---
+//---personalRight---
+$personalRightTitle_height:160px;
+$personalRightBorderColor:#DEDEDE;
+$personalInfoContainerTitle_height:40px;
+$personalInfoContainerBgColor:#FAFAFA;
+$personalInfoBlock_height:124px;
+$personalRightBlockBorderColor:#F2F2F2;
+$personalBlockLeft_width:509px;
+$personalBlockMiddle_width:141px;
+$personalBlockMiddleRight_width:111px;
+$personalBlockRight_width:179px;
+@mixin RightTitle{
+    .rightTitle{
+        height: 160px;
+        padding-top: 20px;
+        padding-left: 23px;
+        .userPic{               //用户头像
+            float: left;
+            position: relative;
+            .vipIcon{
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                top: 8px;
+                right: 5px;
+            }
+        }
+        .userInfo{              //用户信息
+            width: 780px;
+            float: right;
+            p{
+                margin-bottom: 5px;
+                font-size: 24px;
+            }
+            .userSafeInfo{              //我的经验值一栏
+                ul{
+                    position: relative;
+                    top: 4px;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    display: inline-block;
+                }
+                li{
+                    padding-left: 12px;
+                    padding-right: 15px;
+                    border-right: 1px solid $personalRightBorderColor;
+                    float: left;
+                }
+                a{
+                    color: $baseRed;
+                    display: inline-block;
+                    padding: 0 3px;
+                }
+                .validate a{
+                    background: url(../img/unValidate.png) left center no-repeat;
+                    padding-left: 1px;
+                    color: #333;
+                    text-decoration: none;
+                    padding-left: 22px;
+                }
+            }
+            .myPrivilege{                   //我的特权部分的样式
+                margin-top: 10px;
+                .privilege{
+                    display: inline-block;
+                    margin-right: 7px;
+                    width: 45px;
+                    height: 45px;
+                    background: url(../img/privilege1.png) left center no-repeat;
+                }
+            }
+        }
+    }
+}
+@mixin infoBlockTitle{
+    .infoContainerTitle{
+        padding: 0 15px;
+        background-color: $personalInfoContainerBgColor;
+        height: $personalInfoContainerTitle_height;
+    }
+    .titleLeft{
+        float: left;
+        height: 100%;
+        line-height: $personalInfoContainerTitle_height;
+        a{
+            color: $baseRed;
+        }
+    }
+    .titleRight{
+        float: right;
+        height: 100%;
+        line-height: $personalInfoContainerTitle_height;
+        color: #333;
+        text-decoration: none;
+        &:hover{
+            color: $baseRed;
+        }
+    }
+}
+@mixin infoBlockContainer{
+    .personalInfoBlock{
+        height: $personalInfoBlock_height;
+        border-bottom: 1px solid $personalRightBlockBorderColor;
+        text-align: center;
+        line-height: $personalInfoBlock_height;
+        &>a{
+            color: $details_hoverBlueColor;
+            text-decoration: none;
+            &:hover{
+                color: $baseRed;
+            }
+        }
+        &:last-child{
+            border: none;
+        }
+        &>div{
+            float: left;
+            border-right: 1px solid $personalRightBlockBorderColor;
+            box-sizing: border-box;
+            height: 100%;
+        }
+        &>div:last-child{
+            border-right: none;
+        }
+        .blockLeft{
+            width: $personalBlockLeft_width;
+            padding-left: 10px;
+            *{
+                float: left;
+            }
+            span{
+                height: 100%;
+                line-height: $personalInfoBlock_height;
+                margin-left: 20px;
+            }
+        }
+        .blockMiddle{
+            width: $personalBlockMiddle_width;
+            text-align: center;
+            line-height: $personalInfoBlock_height;
+        }
+        .blockMiddleRight{
+            width: $personalBlockMiddleRight_width;
+            text-align: center;
+            line-height: $personalInfoBlock_height;
+            a{
+                color: $details_hoverBlueColor;
+                text-decoration: none;
+                &:hover{
+                    color: $baseRed;
+                }
+            }
+        }
+        .blockRight{
+            width: $personalBlockRight_width;
+            text-align: center;
+            line-height: $personalInfoBlock_height;
+            span{
+                display: inline-block;
+                width: 120px;
+                height: 30px;
+                line-height: 30px;
+                color: #fff;
+                text-align: center;
+                background-color: $baseRed;
+                cursor: pointer;
+                &:hover{
+                    background-color: darken($baseRed,3%);
+                }
+            }
+        }
+    }
+}
+//---pesonalRight End---
+//---recently---
+$personalRecently_height:420px;
+@mixin recently{
+    height: $personalRecently_height;
+    width: $mainWidth;
+    float: left;
+    margin-top: 45px;
+    .recentlyTitle{
+        border-bottom: 1px solid $personalRightBorderColor;
+        span{
+            padding: 10px;
+            display: inline-block;
+            border-bottom: 1px solid #333;
+            position: relative;
+            top: 1px;
+            font-size: 16px;
+        }
+    }
+    .recentlyInfo{
+        width: 1064px;
+        margin: auto;
+        img{
+            width: 230px;
+        }
+        .recent{
+            padding-top: 20px;
+            padding-right: (1064-230*4)/3#{px};
+            float: left;
+            font-size: 15px;
+            .recentName{
+                margin-top: 20px;
+                text-align: center;
+                a{
+                    color: #333;
+                    text-decoration: none;
+                    &:hover{
+                      color: $baseRed;  
+                    }
+                }
+            }
+            .recentPrice{
+                text-align: center;
+            }
+        }
+    }
+}
+//--recently End---
+//---personalCenter End---
+
+//---celebrate---
+$celebrateWidth:1000px;
+@mixin celebrateTopNav{
+    .logoBg{
+        height: 61px;
+        background-image: url(../img/topBgImg.jpg);
+        .navTopContainer{
+            width: $celebrateWidth;
+            margin: auto;
+            .logo{
+                height: 100%;
+                line-height: 61px;
+                float: left;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                float: right;
+                height: 100%;
+                line-height: 61px;
+                font-size: 16px;
+                font-family: "微软雅黑";
+            }
+            li{
+                float: left;
+                margin-left: 15px;
+            }
+            a{
+                color: #fff;
+                &:hover{
+                    color: #DEDEDE;
+                }
+            }
+        }
+    }
+}
+@mixin celebrate_container{
+    .infoContainer{                 //给每个信息层设置通用样式
+        width: $celebrateWidth;
+        margin: auto;
+        img{
+            float: left;
+            @include BlockOut;
+        }
+    }
+    .infoLine2{                 //个别行样式的微调
+        padding-top: 10px;
+        
+    }
+    .infoLine3{
+        @extend .infoLine2;
+    }
+    .infoLine4{
+        @extend .infoLine2;
+    }
+    .infoLine7{
+        @extend .infoLine2;
+    }
+    .infoLine8{
+        @extend .infoLine2;
+    }
+    .infoLine10{
+        padding-top: 1px;
+    }
+    .infoLine11{
+        padding-top: 21px;
+    }
+}
+
+//---celebrateFixedBox---
+$fixedBox_width:120px;
+@mixin celebrateFixedBox{
+    .fixedBox{                              //右侧固定框
+    width: 120px;
+    position: absolute;
+    right:21px;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+        padding-top: 16px;
+        background: #fff;
+        padding-bottom: 8px;
+    }
+    li{
+        text-align: center;
+        background: url(../img/bg4.png) left center no-repeat;
+        height: 29px;
+        line-height:29px; 
+        &:hover{
+            background-color: $listBorderColor;
+        }
+    }
+    a{
+        color: #333;
+        display: block;
+        font-size: 13px;
+        text-decoration: none;
+    }
+    .qrCode{
+        width: 100%;
+        height: 157px;
+        background: url(../img/qrCode.jpg) left top no-repeat;
+    }
+    .topBtn{
+        width: 100%;
+        height: 31px;
+        background: url(../img/topBtn.jpg) left top no-repeat;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+}
+//---celebrateFixedBox End---
+
+//---celebrate End---
+
+//---EMUI---
+$EMUI_topNavHeight:36px;
+$EMUI_topNavBgColor:#434343;
+$EMUI_mainWidth:1000px;
+$EMUI_topNavFontColor:#B7B7B7;
+@mixin dropDownMenuStyle($width:136px,$height:118px){
+    width: $width;
+    height: $height;
+    position: absolute;
+    z-index: 2;
+    display: none;
+    padding-bottom: 20px;
+    left: -6px;
+    top: 36px;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+    li{
+        margin: 0;
+        width: 100%;
+    }
+    a{
+        display: block;
+    }
+}
+@mixin topNavStyle{
+    height: $EMUI_topNavHeight;
+    background-color: $EMUI_topNavBgColor;
+    width: 100%;
+    .topNavContainer{
+        height: 100%;
+        width: $EMUI_mainWidth;
+        margin: auto;
+        ul{
+            float: left;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            float: left;
+            line-height: $EMUI_topNavHeight;
+            font-size: 13px;
+            margin-right: 25px;
+            &:hover>a:not(.apply){
+               animation: aHoverWhite 0.25s forwards;
+               @keyframes aHoverWhite{
+                   from{
+                       color: $EMUI_topNavFontColor;
+                   }
+                   to{
+                       color: #fff;
+                   }
+               }
+            }
+            .applyDropDwon{
+                @include dropDownMenuStyle(100px,154px);
+                left: -19px;
+            }
+        }
+        a{
+            display: inline-block;
+            height: 100%;
+            color: $EMUI_topNavFontColor;
+            text-decoration: none;
+        }
+        .applyContainer{
+            padding-right: 11px;
+            background: url(../img/topDownIcon.png) right center no-repeat;
+            &:hover{
+                background: url(../img/topUpIcon.png) right center no-repeat;
+            }
+            &:hover .applyDropDwon{
+                display: block;
+            }
+        }
+        .selectLang{
+            height: 100%;
+            float: right;
+            font-size: 12px;
+            padding: 0 25px;
+            text-align: center;
+            line-height: $EMUI_topNavHeight;
+            color: $EMUI_topNavFontColor;
+            background: url(../img/selectLang_Down.png) 106px center no-repeat;
+            position: relative;
+            &:hover{
+                background: none;
+            }
+            &:hover .dropDwon{
+                display: block;
+            }
+            .dropDwon{
+                @include dropDownMenuStyle;
+            }
+        }
+    }
+}
+//---topMenu---
+$topMenu_height:82px;
+$topMenuBgColor:#F8F8F8;
+$topMenuBorderColor:#E7E7E7;
+@mixin topMenuStyle{
+    width: 100%;
+    height: $topMenu_height;
+    border-bottom: 1px solid $topMenuBorderColor;
+    background-color: $topMenuBgColor;
+    .topMenu{
+        width: 1000px;
+        margin: auto;
+        height: 100%;
+        .logo{
+            box-sizing: border-box;
+            padding-top: 20px;
+            float: left;
+            height: 100%;
+            a{
+                display: inline-block;
+                &:first-child{
+                    padding-right: 20px;
+                }
+                &:last-child{
+                    padding-left: 20px;
+                    border-left: 1px solid $topMenuBorderColor;
+                }
+            }
+        }
+        .menu{
+            float: right;
+            height: 100%;
+            position: relative;
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+            li{
+                float: left;
+                width: 70px;
+                font-size: 16px;
+                font-family: "微软雅黑";
+                line-height: $topMenu_height;
+                text-align: center;
+                &:first-child a{
+                    color: $baseRed;
+                }
+            }
+            a{
+                display: inline-block;
+                color: #333;
+                text-decoration: none;
+            }
+            .menuActive{
+                color: $baseRed;
+            }
+            .point{
+                position: absolute;
+                width: 6px;
+                height: 6px;
+                border-radius: 6px;
+                bottom: 16px;
+                left: 33px;
+                background-color: $baseRed;
+            }
+        }
+    }
+}
+//---topMenu End---
+//---imgContainer---
+@mixin imgContainer{
+    $imgContainerBg:#F1F1F1;
+    $imgHeight:551px;
+    $imgWidth:1000px;
+    width: 100%;
+    background-color: $imgContainerBg;
+    height: $imgHeight;
+    border-top: 1px solid #fff;
+    .imgCenter{
+        width: $imgWidth;
+        margin: auto;
+        .EMUI_logo{
+            background: url(../img/43a4a63aa34d91e2908affc7f3c3f162_151931vwj5ggu3gigat9gj.png) left top no-repeat;
+            width: 280px;
+            height: 54px;
+            margin: auto;
+            margin-top: 45px;
+        }
+        p{
+            text-align: center;
+            font-size: 24px;
+            font-family:"arial narrow";
+            margin-top: 20px;
+        }
+        .btnBox{
+            width: 276px;
+            height: 50px;
+            margin: auto;
+            background: url(../img/emui_3.0_cn.png) left top no-repeat;
+            div{
+                width: 50%;
+                float: left;
+                line-height: 50px;
+                text-align: center;
+                font-family: "微软雅黑";
+                font-size: 16px;
+                color: #0DC3C7;
+            }
+            .btnLeft:hover{
+                background-image: url(../img/emui_31_left.png);
+            }
+            .btnRight:hover{
+                background-image: url(../img/emui_31_right.png);
+            }
+        }
+        .phoneImg{
+            background: url(../img/2ad60f977af589f9b0c7b73c0a894417_152003rumirrz3m26o8tec.png) left top no-repeat;
+            width: 1000px;
+            height: 200px;
+            margin-top: 80px;
+        }
+    }
+}
+//---imgContainer End---
+//---imgBtmContainer---
+@mixin imgBtmContainer{
+    background-color: #F1F1F1;
+    a{
+        color: #fff;
+        &:hover{
+            color: #fff;
+        }
+    }
+    .imgBox{
+        position: relative;
+        float: left;
+        height: 200px;
+        margin-right: 4px;
+    }
+    .titleBox{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        text-align: center;
+        p{
+            font-size: 12px;
+        }
+        p:first-child{
+            font-family: Helvetica,'Hiragino Sans GB','Microsoft Yahei','微软雅黑',Arial, sans-serif;
+            font-size: 16px;
+        }
+    }
+}
+//---imgBtmContainer End---
+//---footer---
+@mixin EMUIfooter{
+    $fontColor:#7C7C7C;
+    color: $fontColor;
+    font-size: 12px;
+    width: 100%;
+    height: 48px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    background-color: #F1F1F1;
+    a{
+        color: $fontColor;
+        &:hover{
+            text-decoration: none;
+            color: $details_hoverBlueColor;
+        }
+    }
+    .footCenter{
+        width: 1000px;
+        margin: auto;
+        .footLeft{
+            float: left;
+            &>*{
+                display: inline-block;
+            }
+            .icon{
+                display: inline-block;
+                margin-left: 10px;
+                position: relative;
+                top: 3px;
+                cursor: pointer;
+                width: 26px;
+                height: 22px;
+            }
+        }
+        .footRight{
+            float: right;
+        }
+        .wxf{
+            position: relative;
+            &:hover .qrcode{
+                display: block;
+            }
+        }
+        .qrcode{
+            width: 154px;
+            height: 159px;
+            background: url(../img/wxf.png) left top no-repeat;
+            position: absolute;
+            top: -168px;
+            left: -63px;
+            display: none;
+        }
+    }
+    span{
+        height: 11px;
+        padding-right: 8px;
+        margin-left: 8px;
+        border-left: 1px solid $fontColor;
+        position: relative;
+        top: 1px;
+    }
+}
+//---footer End---
+//---EMUI End---

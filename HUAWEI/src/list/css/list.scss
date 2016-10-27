@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import "../../../dist/css/_variables.scss";
+
+@include hoverSideBar;      //设置除主页外其他页面头部的sideBar需要hover才显示的样式
+
+.listContainer{
+    width: $mainWidth;
+    margin: auto;
+    font-size: 12px;
+    @include location;      //顶部网站地图位置的样式设置
+    @include classify;      //对内容中两个分类、排序导航盒子样式的定义
+    
+    @include hotCommand(224px,333px,false,false);           //引用原商品盒子样式代码
+    padding: 0;                     //对父容器的padding初始清零（原来有上和底部的padding）
+    .commandBox{                    //对信息盒子进行样式上的微调使其适应现在的样式
+        float: none;
+        .productContainer{
+            img{
+                width: 180px;
+            }
+            .title{
+                font-size: 12px; 
+                &:hover{
+                    text-decoration: underline;
+                    color: $baseRed;
+                }
+            }
+            .titlebox{
+                width: 185px;
+                bottom: 30px;
+                height: 65px;
+            }
+            .proPrice{
+                font-size: 18px;
+                margin-top: 40px;
+            }
+        }
+    }
+    @include listBlock;
+    @include pagesContainer;        //底部切换页码小div的样式
+}
+//------fixedBox-----
+@include fixedBox;
+//------fixedBox End----

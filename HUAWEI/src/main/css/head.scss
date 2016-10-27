@@ -1,0 +1,212 @@
+@charset "utf-8";
+@import "../../../dist/css/_variables.scss";
+//顶部导航
+.topNavBg{
+    width: 100%;
+    @include AddBorder($topNavBorder);
+    height: $topNavHeight;
+    background-color: $topNavBg;
+    box-sizing: border-box;
+    padding: 5px;
+    .topNav{
+        width: $mainWidth;
+        margin: auto;
+        height: 100%;
+    }
+}
+.topNav_left{
+    position: relative;
+    float: left;
+    @include topNav_dropMenu;       //顶部导航下拉菜单样式
+    @include topNav_LiLayout;       //顶部导航li布局样式
+    @extend %arrow;                 //下拉小箭头样式
+}
+.topNav_right{
+    float: right;
+    @include topNav_LiLayout;       //顶部导航下拉菜单样式
+    @extend %arrow;                 //下拉小箭头样式
+    position: relative;
+    //注册登录样式
+    .log{
+        a{
+            color: #000;
+            &:first-child{
+                margin-right: 10px;
+            }
+            &:hover{
+                color: $baseRed;
+            }
+        }
+    }
+    @include topNav_dropMenu(285px);
+}
+//搜索框盒子
+.searchBox{
+    width: $mainWidth;
+    height: $searchBox_height;
+    margin: auto;
+    margin-bottom: 10px;
+    .search{
+        position: relative;
+    }
+    a{
+        display: inline-block;
+    }
+    .searchIpt{
+       @include setSearchBox;       //搜索框input样式
+    }
+    .iptsut{
+        @include iptSpt;        //设置搜索框中辅助选项的默认样式
+    }
+    .searchIcon{
+       @include searchIcon;
+       background: url(../img/searchIcon.png) left top no-repeat;
+       &:hover{
+           cursor: pointer;
+           background: url(../img/searchIcon_active.png) left top no-repeat;
+       }
+    }
+    .my_cart{
+        @include cartBox;           //我的商城、我的购物车按钮样式
+        @include ahoverBlack;       //hover时颜色样式
+        @include cart_arrow;        //购物车数量小箭头
+        @include dropLogBox1;       //我的商城下拉菜单
+        @include dropCartBox2;      //我的购物车下拉菜单
+    }
+    @include qrCode;            //我的二维码样式
+    .drop_cartIcon{
+        display: inline-block;
+        background: url(../img/drop_cartIcon.PNG) left center no-repeat;
+        height: 28px;
+        line-height: 28px;
+        padding-left: 42px;
+        color: darken($topNavBorder,40%);
+    }
+}
+//中部导航栏
+.Navbox{
+    width: 100%;
+    height: $navHeight;
+    background-color: $blackNavBg;
+    .NavContainer{
+        width: $mainWidth;
+        margin: auto;
+        font-size: 14px;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: $navNormal_width;
+            height: $navHeight;
+            background-color: $blackNavBg;
+            text-align: center;
+            color: #fff;
+            line-height: $navHeight;
+            cursor: pointer;
+            &:hover{
+                background-color: darken($blackNavBg,20%);
+            }
+        }
+        @include hot_newIcon(".hotIcon",$navHotIconBg);
+        @include hot_newIcon(".newIcon",$navNewIconBg);
+    }
+    .allProducts{
+        float: left;
+        width: $navAllProducets_width;
+        height: $navHeight;
+        background-color: $baseRed;
+        box-sizing: border-box;
+        padding-left: 13px;
+        line-height: $navHeight;
+        color: #fff;
+    }
+    .sideBarBox{
+        font-family: "微软雅黑";
+        width: $navAllProducets_width;
+        height: $navSideBar_height;
+        position: absolute;
+        z-index: 2;
+        .sideBarContainer{
+            display: none;
+            width: $navAllProducets_width;
+            height: $navSideBar_height;
+            background-color: $navSideBar_hoverBg;
+            position: absolute;
+            left: $navAllProducets_width;
+            top: 0;
+            padding:15px 0;
+            .sideBar_info2{
+                width: 100%;
+                height: 42px;
+                line-height: 42px;
+                padding-left: 25px;
+                box-sizing: border-box;
+                @include ahoverBlack(14px);
+                a:hover{
+                    text-decoration: none;
+                }
+                &:hover{
+                    background-color: darken($navSideBar_hoverBg,10%);
+                }
+            }
+        }
+        .sideBar_command{
+            margin: 0 25px;
+            border-top: 1px solid darken($topNavBorder,10%);
+            text-align: center;
+            span{
+                padding: 0 10px;
+                position: relative;
+                color: darken($topNavBorder,20%);
+                top: -10px;
+                background-color: $navSideBar_hoverBg;
+            }
+            @include ahoverBlack(14px);
+            a{
+                display: block;
+                text-align: left;
+                margin-bottom: 12px;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .sideBar{
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-top: 10px;
+        background-color: #fff;
+        @include ahoverBlack(14px);
+        a:hover{
+            text-decoration: none;
+        }
+        &:hover{
+            background-color: $navSideBar_hoverBg;
+        }
+    }
+    .sideBarInfo{
+        padding-top: 5px;
+        a{
+           color: darken($topNavBorder,30%);
+           display: inline-block;
+           margin-right: 10px;  
+        }
+    }
+    .sideBarHotIcon{
+        width: 11px;
+        height: 11px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 11px;
+        text-align: center;
+        background-color: $navSideBarHot_iconBg;
+        box-shadow: 2px 2px 3px $topNavBorder;
+        top: -10px;
+        right: -10px;
+    }
+    @include cart_arrow(".sideBarHotIcon",$navSideBarHot_iconBg,4px,-10px)
+}

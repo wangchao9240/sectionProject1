@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import "../../../dist/css/_variables.scss";
+
+//---topNav---
+.topNavBg{
+    @include topNavStyle;   //定义了最顶部菜单的样式
+}
+//---topNav End---
+
+//---topMenu---
+.topMenuContainer{
+    @include topMenuStyle;      //定义了中部导航栏菜单的样式
+}
+//---topMenu End---
+
+//---imgContainer---
+.imgContainer{
+    @include imgContainer;          //定义了中部放置大图片及按钮部分的样式
+}
+//---imgContainer End---
+
+//---imgBtmContainer---
+.imgBtmContainer{
+    @include imgBtmContainer;       //定义了底部放4张图片位置的样式
+}
+//---imgBtmContainer End---
+
+//---footer---
+.footer{
+    @include EMUIfooter;            //定义了脚部部分的样式
+}
+//---footer End---

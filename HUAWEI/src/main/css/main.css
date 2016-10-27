@@ -1,0 +1,390 @@
+@charset "UTF-8";
+.foucsBox {
+  width: 100%;
+  height: 448px;
+  background-color: #EDEDED;
+  position: relative;
+  overflow: hidden;
+}
+.foucsBox .foucsControl {
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 30px;
+  background-color: gray;
+  float: left;
+  margin-right: 5px;
+}
+.foucsBox .foucsControlBox {
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+}
+.foucsBox .foucsControl_active {
+  background-color: #C81118;
+}
+.foucsBox .foucsBoxContainer {
+  position: relative;
+}
+.foucsBox .foucsBoxContainer > ul {
+  width: 1920px;
+  height: 448px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.foucsBox .foucsBoxContainer > ul li {
+  position: absolute;
+  z-index: 0;
+  float: left;
+}
+
+.middlebox {
+  width: 1200px;
+  margin: auto;
+  padding-bottom: 40px;
+}
+.middlebox .middle_top {
+  padding-top: 20px;
+}
+.middlebox .middle_top .middleImg {
+  float: left;
+  padding-left: 8px;
+}
+.middlebox .middle_top .middleImg:hover {
+  animation: boxshadowMove .3s forwards;
+}
+@keyframes boxshadowMove {
+  from {
+    box-shadow: none;
+  }
+  to {
+    box-shadow: 0px 10px 20px gainsboro;
+  }
+}
+.middlebox .middle_options {
+  width: 240px;
+  height: 160px;
+  background-color: #F5F5F5;
+  float: left;
+  font-size: 12px;
+}
+.middlebox .middle_options ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.middlebox .middle_options li {
+  cursor: pointer;
+  padding-top: 10px;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+}
+.middlebox .middle_options img {
+  display: block;
+  margin: auto;
+}
+.middlebox .middle_options a {
+  color: #666666;
+}
+.middlebox .middle_options a:hover {
+  color: #333;
+  text-decoration: none;
+}
+.middlebox .hotCommand {
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+.middlebox .hotCommand > p {
+  font-size: 24px;
+  font-family: "微软雅黑";
+}
+.middlebox .hotCommand .commandBox {
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+  border-left: 1px solid #e3e3e3;
+  box-sizing: border-box;
+  float: left;
+  width: 240px;
+  height: 320px;
+}
+.middlebox .hotCommand .commandBox a:hover {
+  text-decoration: none;
+}
+.middlebox .hotCommand .commandBox .proIcon {
+  font-size: 12px;
+  color: #FFF;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 18px;
+}
+.middlebox .hotCommand .productContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.middlebox .hotCommand .productContainer .titlebox {
+  position: absolute;
+  bottom: 15px;
+}
+.middlebox .hotCommand .productContainer img {
+  display: block;
+  margin: 0px auto 25px auto;
+  padding-top: 45px;
+}
+.middlebox .hotCommand .productContainer .title {
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
+.middlebox .hotCommand .productContainer .supTitle {
+  font-size: 12px;
+  text-align: center;
+  color: #B0B0B0;
+}
+.middlebox .hotCommand .productContainer .proPrice {
+  text-align: center;
+  color: #C81118;
+}
+.middlebox .hotCommand .productContainer:hover img {
+  animation: imgLarger 0.3s forwards;
+}
+@keyframes imgLarger {
+  from {
+    width: 146px;
+  }
+  to {
+    width: 155px;
+  }
+}
+.middlebox .middleFoucs {
+  position: relative;
+}
+.middlebox .middleFoucs .foucsBoxContainer {
+  position: relative;
+}
+.middlebox .middleFoucs .foucsBoxContainer > ul {
+  width: 1200px;
+  height: 110px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.middlebox .middleFoucs .foucsBoxContainer > ul li {
+  position: absolute;
+  z-index: 0;
+  float: left;
+}
+.middlebox .middleFoucs .foucsControl {
+  opacity: 0.6;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 30px;
+  background-color: gray;
+  float: left;
+  margin-right: 5px;
+}
+.middlebox .middleFoucs .foucsControlBox {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+}
+.middlebox .middleFoucs .foucsControl_active {
+  background-color: #C81118;
+}
+
+.infoContainerBg {
+  width: 100%;
+  min-height: 300px;
+  background-color: #F5F5F5;
+}
+.infoContainerBg .infoContainer {
+  width: 1200px;
+  margin: auto;
+  min-height: 200px;
+}
+.infoContainerBg .infoBlock {
+  padding-top: 35px;
+}
+.infoContainerBg .titleBox p {
+  float: left;
+  font-size: 24px;
+  margin-right: 35px;
+}
+.infoContainerBg .titleBox ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 8px;
+  display: inline-block;
+}
+.infoContainerBg .titleBox .more {
+  float: right;
+}
+.infoContainerBg .titleBox .more li {
+  border: 0;
+  width: 93px;
+  text-align: center;
+  padding: 0;
+  background: url(../img/infoMore_Icon.PNG) left center no-repeat;
+}
+.infoContainerBg .titleBox li {
+  font-size: 12px;
+  float: left;
+  padding: 0px 10px;
+  border-right: 1px solid #d9d9d9;
+}
+.infoContainerBg .titleBox a {
+  color: #8C8C8C;
+}
+.infoContainerBg .titleBox a:hover {
+  text-decoration: none;
+  color: #C81118;
+}
+.infoContainerBg .infobox_left {
+  width: 232px;
+  height: 570px;
+  float: left;
+}
+.infoContainerBg .infobox_left img:hover {
+  position: relative;
+  animation: blockOut .3s forwards;
+}
+@keyframes blockOut {
+  from {
+    top: 0px;
+    box-shadow: none;
+  }
+  to {
+    top: -3px;
+    box-shadow: 0px 10px 30px gainsboro;
+  }
+}
+.infoContainerBg .infobox_right {
+  width: 968px;
+  float: left;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  padding: 0;
+}
+.infoContainerBg .infobox_right > p {
+  font-size: 24px;
+  font-family: "微软雅黑";
+}
+.infoContainerBg .infobox_right .commandBox {
+  box-sizing: border-box;
+  float: left;
+  width: 232px;
+  height: 280px;
+}
+.infoContainerBg .infobox_right .commandBox a:hover {
+  text-decoration: none;
+}
+.infoContainerBg .infobox_right .commandBox .proIcon {
+  font-size: 12px;
+  color: #FFF;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 18px;
+}
+.infoContainerBg .infobox_right .productContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.infoContainerBg .infobox_right .productContainer .titlebox {
+  position: absolute;
+  bottom: 15px;
+}
+.infoContainerBg .infobox_right .productContainer img {
+  display: block;
+  margin: 0px auto 25px auto;
+  padding-top: 45px;
+}
+.infoContainerBg .infobox_right .productContainer .title {
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
+.infoContainerBg .infobox_right .productContainer .supTitle {
+  font-size: 12px;
+  text-align: center;
+  color: #B0B0B0;
+}
+.infoContainerBg .infobox_right .productContainer .proPrice {
+  text-align: center;
+  color: #C81118;
+}
+.infoContainerBg .infobox_right .titlebox {
+  bottom: 5px !important;
+}
+.infoContainerBg .infobox_right .commandBox {
+  background-color: #fff;
+}
+.infoContainerBg .infobox_right .commandBox:hover {
+  position: relative;
+  animation: blockOut .3s forwards;
+}
+@keyframes blockOut {
+  from {
+    top: 0px;
+    box-shadow: none;
+  }
+  to {
+    top: -3px;
+    box-shadow: 0px 10px 30px gainsboro;
+  }
+}
+.infoContainerBg .infoImgBox {
+  width: 1200px;
+  padding: 50px 0 40px 0;
+  margin: auto;
+}
+
+.fixedbox {
+  width: 48px;
+  height: 170px;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 300px;
+}
+.fixedbox div {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.fixedbox .top {
+  display: none;
+  opacity: 0;
+  background: url(../img/topIcon.PNG) left top no-repeat;
+}
+.fixedbox .top:hover {
+  background: url(../img/topIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .advice {
+  background: url(../img/adviceIcon.png) left top no-repeat;
+}
+.fixedbox .advice:hover {
+  background: url(../img/adviceIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .service {
+  background: url(../img/serviceIcon.png) left top no-repeat;
+}
+.fixedbox .service:hover {
+  background: url(../img/serviceIcon_active.png) left top no-repeat;
+}
+
+/*# sourceMappingURL=main.css.map */

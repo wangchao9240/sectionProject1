@@ -1,0 +1,117 @@
+@charset "UTF-8";
+.logoBg {
+  height: 61px;
+  background-image: url(../img/topBgImg.jpg);
+}
+.logoBg .navTopContainer {
+  width: 1000px;
+  margin: auto;
+}
+.logoBg .navTopContainer .logo {
+  height: 100%;
+  line-height: 61px;
+  float: left;
+}
+.logoBg .navTopContainer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: right;
+  height: 100%;
+  line-height: 61px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+}
+.logoBg .navTopContainer li {
+  float: left;
+  margin-left: 15px;
+}
+.logoBg .navTopContainer a {
+  color: #fff;
+}
+.logoBg .navTopContainer a:hover {
+  color: #DEDEDE;
+}
+
+.mainImg {
+  height: 472px;
+  background-image: url(../img/mainImg.jpg);
+}
+
+.infoContainer {
+  width: 1000px;
+  margin: auto;
+}
+.infoContainer img {
+  float: left;
+}
+.infoContainer img:hover {
+  position: relative;
+  animation: blockOut .3s forwards;
+}
+@keyframes blockOut {
+  from {
+    top: 0px;
+    box-shadow: none;
+  }
+  to {
+    top: -3px;
+    box-shadow: 0px 10px 30px gainsboro;
+  }
+}
+.infoLine2, .infoLine3, .infoLine4, .infoLine7, .infoLine8 {
+  padding-top: 10px;
+}
+
+.infoLine10 {
+  padding-top: 1px;
+}
+
+.infoLine11 {
+  padding-top: 21px;
+}
+
+.fixedBox {
+  width: 120px;
+  position: absolute;
+  right: 21px;
+}
+.fixedBox ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: block;
+  padding-top: 16px;
+  background: #fff;
+  padding-bottom: 8px;
+}
+.fixedBox li {
+  text-align: center;
+  background: url(../img/bg4.png) left center no-repeat;
+  height: 29px;
+  line-height: 29px;
+}
+.fixedBox li:hover {
+  background-color: #DEDEDE;
+}
+.fixedBox a {
+  color: #333;
+  display: block;
+  font-size: 13px;
+  text-decoration: none;
+}
+.fixedBox .qrCode {
+  width: 100%;
+  height: 157px;
+  background: url(../img/qrCode.jpg) left top no-repeat;
+}
+.fixedBox .topBtn {
+  width: 100%;
+  height: 31px;
+  background: url(../img/topBtn.jpg) left top no-repeat;
+}
+.fixedBox .topBtn:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=celebrate.css.map */

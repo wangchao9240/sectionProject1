@@ -1,0 +1,1187 @@
+@charset "UTF-8";
+.allProducts {
+  background: url(../img/listDownIcon.PNG) 220px center no-repeat;
+}
+
+.sideBarBox {
+  display: none;
+}
+
+.fixedbox {
+  width: 48px;
+  height: 170px;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 300px;
+}
+.fixedbox div {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.fixedbox .top {
+  display: none;
+  opacity: 0;
+  background: url(../img/topIcon.PNG) left top no-repeat;
+}
+.fixedbox .top:hover {
+  background: url(../img/topIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .advice {
+  background: url(../img/adviceIcon.png) left top no-repeat;
+}
+.fixedbox .advice:hover {
+  background: url(../img/adviceIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .service {
+  background: url(../img/serviceIcon.png) left top no-repeat;
+}
+.fixedbox .service:hover {
+  background: url(../img/serviceIcon_active.png) left top no-repeat;
+}
+
+.middleBox {
+  width: 1200px;
+  margin: auto;
+}
+.middleBox .location {
+  font-size: 12px;
+  padding: 12px 0;
+}
+.middleBox .location a {
+  color: #000;
+  font-size: 12px;
+}
+.middleBox .location a:hover {
+  color: #C81118;
+}
+.middleBox .location span {
+  padding: 0 10px;
+}
+.middleBox .location p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.middleBox .head {
+  font-family: "微软雅黑";
+  width: 1200px;
+  box-sizing: border-box;
+  min-height: 300px;
+  border: 1px solid #DEDEDE;
+}
+.middleBox .head .head_left {
+  float: left;
+  width: 542px;
+}
+.middleBox .head .head_left .warp {
+  width: 480px;
+  height: 480px;
+  margin: 45px auto;
+  position: relative;
+}
+.middleBox .head .head_left .warp ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.middleBox .head .head_left .warp li {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.middleBox .head .head_left .warp img {
+  width: 100%;
+}
+.middleBox .head .head_left .moveBox {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border: 1px solid #DEDEDE;
+  background-color: #fff;
+}
+.middleBox .head .head_left .moveBox:hover {
+  cursor: move;
+}
+.middleBox .head .head_left .showBox {
+  opacity: 0;
+  display: none;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  border: 2px solid #ababab;
+  right: -400px;
+  top: 45px;
+  z-index: 100;
+}
+.middleBox .head .head_left .thumbsBox {
+  width: 480px;
+  margin: auto;
+  padding: 30px 36px;
+  position: relative;
+}
+.middleBox .head .head_left .thumbsBox .controlLeft {
+  width: 12px;
+  height: 70px;
+  position: absolute;
+  left: 0px;
+  top: 23px;
+  background: url(../img/controlLeft.PNG) left top no-repeat;
+  display: inline-block;
+}
+.middleBox .head .head_left .thumbsBox .controlLeft:hover {
+  cursor: pointer;
+  background: url(../img/controlLeft_active.png);
+}
+.middleBox .head .head_left .thumbsBox .controlRight {
+  width: 12px;
+  height: 70px;
+  position: absolute;
+  right: 0px;
+  top: 23px;
+  background: url(../img/controlRight.png) left top no-repeat;
+  display: inline-block;
+}
+.middleBox .head .head_left .thumbsBox .controlRight:hover {
+  cursor: pointer;
+  background: url(../img/controlRight_active.png);
+}
+.middleBox .head .head_left .thumbsBox .thumbsContainer {
+  overflow: hidden;
+  position: relative;
+  height: 57px;
+}
+.middleBox .head .head_left .thumbsBox ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.middleBox .head .head_left .thumbsBox li {
+  float: left;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  border: 1px solid #DEDEDE;
+}
+.middleBox .head .head_left .thumbsBox li .redBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55px;
+  height: 55px;
+  border: 3px solid #EB8D91;
+}
+.middleBox .head .head_left .thumbsBox img {
+  width: 100%;
+}
+.middleBox .head .head_right {
+  float: left;
+  font-size: 12px;
+  min-height: 687px;
+  width: 656px;
+}
+.middleBox .head .head_right > div {
+  padding: 0 30px;
+}
+.middleBox .head .head_right p {
+  margin: 0;
+  padding: 0;
+}
+.middleBox .head .head_right span {
+  display: inline-block;
+}
+.middleBox .head .head_right .headRight_top {
+  padding-top: 32px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DEDEDE;
+}
+.middleBox .head .head_right .headRight_top .title {
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+.middleBox .head .head_right .headRight_top .subtitle {
+  color: #C81118;
+  font-size: 16px;
+}
+.middleBox .head .head_right .headRight_middle {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.middleBox .head .head_right .headRight_middle .qrcodeBuy {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding-right: 21px;
+  height: 13px;
+  vertical-align: top;
+  background: url(../img/qrcodeBuy.png) right top no-repeat;
+}
+.middleBox .head .head_right .headRight_middle .qrcodeBuy .qrcodePhone {
+  background: url(../img/qrcode.png) left top no-repeat;
+  width: 136px;
+  height: 140px;
+  position: absolute;
+  bottom: 32px;
+  right: -46px;
+  display: none;
+  border: 1px solid #DEDEDE;
+}
+.middleBox .head .head_right .headRight_middle .qrcodeBuy .qrcodePhone .triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -11px;
+  left: 53px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #DEDEDE;
+}
+.middleBox .head .head_right .headRight_middle .redFont {
+  color: #C81118;
+}
+.middleBox .head .head_right .headRight_middle .redFont > span {
+  vertical-align: top;
+}
+.middleBox .head .head_right .headRight_middle .redFont a {
+  color: #C81118;
+}
+.middleBox .head .head_right .headRight_middle .redFont .middle_info span {
+  display: block;
+}
+.middleBox .head .head_right .headRight_middle > div {
+  margin-top: 8px;
+}
+.middleBox .head .head_right .headRight_middle .middle_info div {
+  display: inline-block;
+}
+.middleBox .head .head_right .headRight_middle .middle_info .price {
+  font-size: 20px;
+  color: #C81118;
+}
+.middleBox .head .head_right .headRight_middle .middle_info .stars {
+  display: inline-block;
+  height: 12px;
+  background: url(../img/headRight_stars.png) left center repeat-x;
+}
+.middleBox .head .head_right .headRight_middle .middle_info .comment a {
+  color: #333;
+}
+.middleBox .head .head_right .headRight_middle .middle_info .comment a:hover {
+  color: #333;
+}
+.middleBox .head .head_right .headRight_middle .middle_info .change a {
+  color: red;
+}
+.middleBox .head .head_right .headRight_middle .middle_info .change a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+.middleBox .head .head_right .headRight_middle .middle_info .bloodRed {
+  color: red;
+}
+.middleBox .head .head_right .headRight_bottom {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-top: 1px solid #DEDEDE;
+}
+.middleBox .head .head_right .headRight_bottom > div {
+  margin-top: 8px;
+}
+.middleBox .head .head_right .headRight_bottom .middle_info div {
+  display: inline-block;
+}
+.middleBox .head .head_right .headRight_bottom ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+.middleBox .head .head_right .headRight_bottom li {
+  float: left;
+  margin-right: 10px;
+}
+.middleBox .head .head_right .headRight_bottom li:hover img {
+  border-color: #7f7f7f;
+}
+.middleBox .head .head_right .headRight_bottom .middle_info a {
+  color: #333;
+  text-decoration: none;
+}
+.middleBox .head .head_right .headRight_bottom .middle_info a:hover, .middleBox .head .head_right .headRight_bottom .middle_info a:active, .middleBox .head .head_right .headRight_bottom .middle_info a:visited {
+  text-decoration: none;
+}
+.middleBox .head .head_right .headRight_bottom .middle_info a p {
+  text-align: center;
+}
+.middleBox .head .head_right .headRight_bottom img {
+  border: 1px solid #B2B2B2;
+}
+.middleBox .head .head_right .headRight_bottom span {
+  vertical-align: middle;
+}
+.middleBox .head .head_right .headRight_bottom .leftBottom_icon {
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+  background: url(../img/leftBottom_icon.png) left top no-repeat;
+  width: 10px;
+  height: 10px;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox li {
+  padding: 0 8px;
+  height: 26px;
+  border: 1px solid #B2B2B2;
+  line-height: 26px;
+  text-align: center;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox li:hover {
+  border-color: #7f7f7f;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox .lack {
+  color: #B2B2B2;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox .serv {
+  position: relative;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox .serv li {
+  background: url(../img/servIcon_down.PNG) 280px center no-repeat;
+  padding-right: 20px;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox .serv li:hover {
+  background: url(../img/servIcon_Up.PNG) 280px center no-repeat;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox .serv .safeBox {
+  display: none;
+  position: absolute;
+  left: 0px;
+  top: 25px;
+  background: none;
+  background-color: #fff;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox .serv .safeBox:hover {
+  background: none;
+  background-color: #fff;
+}
+.middleBox .head .head_right .headRight_bottom .checkBox .detailsLink {
+  color: #3268CC;
+  vertical-align: super;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt {
+  padding-top: 15px;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .yourChoice {
+  display: inline-block;
+  color: #C81118;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .buttonBox {
+  padding-top: 12px;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .buttonBox div {
+  display: none;
+  width: 190px;
+  height: 42px;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .buttonBox div:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .getMeKonwn {
+  background: url(../img/getMeKonwn.png) left top no-repeat;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .addCartBtn {
+  background: url(../img/addCartBtm.png) left top no-repeat;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .buyItNow {
+  background: url(../img/buyItNowBtn.png) left top no-repeat;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .joinPurchase {
+  background: url(../img/joinPurchase.png) left top no-repeat;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .expri {
+  display: none;
+}
+.middleBox .head .head_right .headRight_bottom .canIbuyIt .expri a {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 11px;
+}
+
+.infoBoxContainer {
+  padding-top: 20px;
+  width: 1200px;
+  margin: auto;
+  padding-bottom: 60px;
+}
+.infoBoxContainer .info_left {
+  width: 240px;
+  float: left;
+}
+.infoBoxContainer .info_left dt {
+  font-weight: normal;
+  box-sizing: border-box;
+  height: 47px;
+  line-height: 47px;
+  padding-left: 13px;
+  background-color: #F7F7F7;
+  font-family: "微软雅黑";
+  border: 1px solid #DEDEDE;
+}
+.infoBoxContainer .info_left dt .delateBtn {
+  width: 17px;
+  height: 45px;
+  margin-right: 15px;
+  float: right;
+  background: url(../img/delateBtn.png) left center no-repeat;
+}
+.infoBoxContainer .info_left dt .delateBtn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.infoBoxContainer .info_left dd {
+  width: 240px;
+  height: 82px;
+  padding: 10px 15px;
+  position: relative;
+  border-left: 1px solid #DEDEDE;
+  border-right: 1px solid #DEDEDE;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .info_left dd .hotInfo {
+  width: 135px;
+  height: 60px;
+  float: right;
+  font-size: 12px;
+}
+.infoBoxContainer .info_left dd .hotInfo p {
+  margin-bottom: 0;
+}
+.infoBoxContainer .info_left dd .hotInfo a {
+  color: #666;
+}
+.infoBoxContainer .info_left dd .hotInfo .redFont {
+  color: #C81118;
+}
+.infoBoxContainer .info_left dd .countArrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 23px solid transparent;
+}
+.infoBoxContainer .info_left dd .countArrow div {
+  position: absolute;
+  top: -25px;
+  left: 2px;
+  font-size: 12px;
+  color: #fff;
+}
+.infoBoxContainer .info_right {
+  width: 940px;
+  float: right;
+}
+.infoBoxContainer .info_right a {
+  color: #333;
+}
+.infoBoxContainer .info_right .addCartBtn {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 126px;
+  height: 35px;
+  background-color: #C81118;
+  line-height: 35px;
+  text-align: center;
+  color: #fff;
+  font-family: "微软雅黑";
+}
+.infoBoxContainer .info_right .addCartBtn:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.infoBoxContainer .info_right .listContainer {
+  border: 1px solid #DEDEDE;
+}
+.infoBoxContainer .info_right .listContainer .listTitle ul {
+  font-family: "微软雅黑";
+  margin: 0;
+  padding: 0;
+  background-color: #F7F7F7;
+  list-style: none;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .info_right .listContainer .listTitle li {
+  position: relative;
+  float: left;
+  height: 49px;
+  box-sizing: border-box;
+  padding: 15px 25px;
+  border-right: 1px solid #DEDEDE;
+  background-color: #fff;
+}
+.infoBoxContainer .info_right .listContainer .listTitle li:hover {
+  cursor: pointer;
+  color: #C81118;
+}
+.infoBoxContainer .info_right .listContainer .listTitle .redLineTop {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: #C81118;
+}
+.infoBoxContainer .info_right .listContainer .listTitle .whiteLineBtm {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: #fff;
+}
+.infoBoxContainer .info_right .listContainer .listInfoBox {
+  width: 100%;
+}
+.infoBoxContainer .info_right .listContainer .listInfoBox .listInfo {
+  display: none;
+  width: 100%;
+}
+.infoBoxContainer .info_right .list1Container {
+  width: 750px;
+  margin: auto;
+}
+.infoBoxContainer .info_right .redFont {
+  margin-top: 10px;
+  font-size: 14px;
+  color: red;
+  margin-bottom: 30px;
+}
+.infoBoxContainer .info_right .listText {
+  font-size: 12px;
+  text-indent: 2em;
+}
+.infoBoxContainer .info_right .list3Container {
+  padding: 0 43px 30px 43px;
+  font-family: "微软雅黑";
+}
+.infoBoxContainer .info_right .list3Container .parameterBox {
+  padding-top: 40px;
+}
+.infoBoxContainer .info_right .list3Container .parTitle {
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .info_right .list3Container .parDetails {
+  font-size: 13px;
+  font-family: "微软雅黑";
+  padding-top: 10px;
+}
+.infoBoxContainer .info_right .list3Container .parDetailsTitle {
+  vertical-align: top;
+  text-indent: 2px;
+  display: inline-block;
+  width: 142px;
+}
+.infoBoxContainer .info_right .list3Container .parDetailsText {
+  width: 705px;
+  display: inline-block;
+}
+.infoBoxContainer .info_right .list4Container {
+  padding: 30px 43px;
+  font-size: 13px;
+  font-family: "微软雅黑";
+}
+.infoBoxContainer .info_right .list5Container {
+  padding: 30px 43px;
+  font-size: 13px;
+  font-family: "微软雅黑";
+}
+.infoBoxContainer .info_right .listContainerCloneBox {
+  margin-top: 20px;
+  border: 1px solid #DEDEDE;
+}
+.infoBoxContainer .consultBox {
+  width: 940px;
+  float: right;
+  margin-top: 20px;
+}
+.infoBoxContainer .consultBox .listContainer {
+  border: 1px solid #DEDEDE;
+}
+.infoBoxContainer .consultBox .listContainer .listTitle ul {
+  font-family: "微软雅黑";
+  margin: 0;
+  padding: 0;
+  background-color: #F7F7F7;
+  list-style: none;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .consultBox .listContainer .listTitle li {
+  position: relative;
+  float: left;
+  height: 49px;
+  box-sizing: border-box;
+  padding: 15px 25px;
+  border-right: 1px solid #DEDEDE;
+  background-color: #fff;
+}
+.infoBoxContainer .consultBox .listContainer .listTitle li:hover {
+  cursor: pointer;
+  color: #C81118;
+}
+.infoBoxContainer .consultBox .listContainer .listTitle .redLineTop {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: #C81118;
+}
+.infoBoxContainer .consultBox .listContainer .listTitle .whiteLineBtm {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: #fff;
+}
+.infoBoxContainer .consultBox .listContainer .listInfoBox {
+  width: 100%;
+}
+.infoBoxContainer .consultBox .listContainer .listInfoBox .listInfo {
+  display: none;
+  width: 100%;
+}
+.infoBoxContainer .consultBox .listTitle a {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  color: #333;
+}
+.infoBoxContainer .consultBox .tipsTitle {
+  padding: 20px;
+  font-size: 12px;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .consultBox .tipsTitle span {
+  color: #EC6909;
+}
+.infoBoxContainer .consultBox .infoBlockContainer {
+  font-size: 12px;
+  padding: 0px 25px;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .infoNull {
+  padding: 60px 0;
+  text-align: center;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer {
+  float: right;
+  padding: 40px 0;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer div, .infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer a {
+  margin-left: 8px;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer .pagesChange {
+  border: 1px solid #DEDEDE;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer .pagesChange:hover {
+  border: 1px solid #c5c5c5;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer ul a {
+  float: left;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer ul a:first-child {
+  color: #C81118;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer li {
+  padding: 0;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer a {
+  color: #000;
+  font-size: 12px;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .pageChangesBox .pagesContainer a:hover {
+  color: #C81118;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .commentCount {
+  float: left;
+  padding-top: 40px;
+}
+.infoBoxContainer .consultBox .infoBlockContainer .commentCount span {
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #EC6909;
+}
+.infoBoxContainer .consultBox .infoBlock {
+  padding: 18px 0;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .consultBox .titleContainer .user {
+  padding-right: 23px;
+  margin-right: 10px;
+}
+.infoBoxContainer .consultBox .titleContainer > div {
+  display: inline-block;
+  color: #999;
+}
+.infoBoxContainer .consultBox .consultContainer {
+  padding-top: 8px;
+  padding-bottom: 13px;
+}
+.infoBoxContainer .consultBox .replyContainer {
+  color: #EC6909;
+}
+.infoBoxContainer .consultBox .replyContainer .reply {
+  width: 710px;
+  float: left;
+}
+.infoBoxContainer .consultBox .replyContainer .replyTime {
+  color: #999;
+  float: right;
+}
+.infoBoxContainer .consultBox .vip0 {
+  background: url(../img/consultVip0.PNG) right center no-repeat;
+}
+.infoBoxContainer .consultBox .vip2 {
+  background: url(../img/VIP2.png) right center no-repeat;
+}
+.infoBoxContainer .announceBox {
+  width: 940px;
+  float: right;
+  border: 1px solid #DEDEDE;
+  border-top: 0;
+  font-family: "微软雅黑";
+}
+.infoBoxContainer .announceBox .announceTitle {
+  height: 42px;
+  line-height: 42px;
+  background-color: #F7F7F7;
+  color: #333;
+  text-align: center;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .announceBox .announceInfoContainer {
+  font-size: 12px;
+  padding: 15px 20px 20px 20px;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .annuounceTop {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #DEDEDE;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .cosultType {
+  padding: 20px 0;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .cosultType input {
+  vertical-align: middle;
+  margin: 0;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .cosultType label {
+  margin-left: 15px;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .cosultType span {
+  font-weight: lighter;
+  margin-left: 5px;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .textArea {
+  height: 130px;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .textArea textarea {
+  width: 100%;
+  height: 100%;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .checkBox {
+  padding-top: 8px;
+  padding-bottom: 20px;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .checkBox input {
+  vertical-align: middle;
+  margin: 0;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .checkBox span {
+  font-weight: lighter;
+  margin-left: 5px;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .submitBtn button {
+  width: 98px;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: center;
+  border: 1px solid #DEDEDE;
+  background-color: #f8f8f8;
+  outline: none;
+}
+.infoBoxContainer .announceBox .announceInfoContainer .submitBtn span {
+  display: none;
+  color: #C81118;
+  margin-left: 20px;
+}
+
+.list2Container {
+  font-size: 12px;
+}
+.list2Container .commentTitle {
+  height: 108px;
+  border-bottom: 1px solid #DEDEDE;
+}
+.list2Container .commentTitle .commentTitleLeft {
+  float: left;
+  height: 108px;
+  width: 150px;
+  text-align: center;
+}
+.list2Container .commentTitle .point {
+  padding-top: 8px;
+  color: #C81118;
+  font-size: 48px;
+  margin: 0;
+}
+.list2Container .commentTitle .point span {
+  font-size: 18px;
+}
+.list2Container .commentTitle .commentTitleRight {
+  width: 788px px;
+  float: left;
+}
+.list2Container .commentTitle .commentTitleRight .influen {
+  padding-top: 25px;
+  color: #888;
+}
+.list2Container .commentTitle .commentTitleRight .influenTetx {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #f6f6f6;
+  margin-left: 10px;
+}
+.list2Container .commentTitle .commentTitleRight .influenTetx .count {
+  color: #c8c8c8;
+}
+.list2Container .commentInfo .commentBlock {
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.list2Container .commentInfo .blockLeft {
+  width: 54px;
+  display: inline-block;
+  height: 140px;
+  text-align: center;
+  margin-right: 20px;
+}
+.list2Container .commentInfo .blockLeft img {
+  width: 48px;
+  border: 1px solid #DEDEDE;
+}
+.list2Container .commentInfo .blockLeft p {
+  margin-top: 5px;
+}
+.list2Container .commentInfo .blockLeft .vip2Icon {
+  background: url(../img/VIP2.png) left top no-repeat;
+  width: 16px;
+  height: 16px;
+  top: 35px;
+  left: -3px;
+  position: absolute;
+}
+.list2Container .commentInfo .blockRight {
+  display: inline-block;
+  width: 795px;
+  vertical-align: top;
+}
+.list2Container .commentInfo .blockRight .starsBox {
+  float: left;
+  background: url(../img/headRight_stars.png) left center repeat-x;
+  height: 12px;
+  width: 75px;
+  margin-top: 2px;
+}
+.list2Container .commentInfo .blockRight .influenBox {
+  float: left;
+}
+.list2Container .commentInfo .blockRight .influenBox .influen {
+  padding-top: 25px;
+  color: #888;
+}
+.list2Container .commentInfo .blockRight .influenBox .influenTetx {
+  display: inline-block;
+  padding: 2px 10px;
+  background: #f6f6f6;
+  margin-left: 10px;
+}
+.list2Container .commentInfo .blockRight .influenBox .influenTetx .count {
+  color: #c8c8c8;
+}
+.list2Container .commentInfo .blockRight .influenBox .influen {
+  padding-top: 0;
+}
+.list2Container .commentInfo .blockRight .time {
+  float: right;
+  color: #bbbbbb;
+}
+.list2Container .commentInfo .blockRight .blockComment {
+  padding-top: 10px;
+  box-sizing: border-box;
+  min-height: 70px;
+  border-bottom: 1px dashed #DEDEDE;
+}
+.list2Container .commentInfo .blockRight .blockReply {
+  min-height: 50px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #DEDEDE;
+  padding: 15px 0 20px 0;
+  color: #bbbbbb;
+}
+.list2Container .commentInfo .blockRight .blockReply span {
+  color: #C81118;
+}
+.list2Container .commentInfo .pagesBox {
+  padding-right: 41px;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer {
+  float: right;
+  padding: 40px 0;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer div, .list2Container .commentInfo .pagesBox .pagesContainer a {
+  margin-left: 8px;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer .pagesChange {
+  border: 1px solid #DEDEDE;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer .pagesChange:hover {
+  border: 1px solid #c5c5c5;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer ul a {
+  float: left;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer ul a:first-child {
+  color: #C81118;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer li {
+  padding: 0;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer a {
+  color: #000;
+  font-size: 12px;
+}
+.list2Container .commentInfo .pagesBox .pagesContainer a:hover {
+  color: #C81118;
+}
+
+.packageBox, .commandPagBox {
+  width: 1200px;
+  margin: auto;
+  padding-top: 30px;
+}
+.packageBox .listContainer, .commandPagBox .listContainer {
+  border: 1px solid #DEDEDE;
+}
+.packageBox .listContainer .listTitle ul, .commandPagBox .listContainer .listTitle ul {
+  font-family: "微软雅黑";
+  margin: 0;
+  padding: 0;
+  background-color: #F7F7F7;
+  list-style: none;
+  border-bottom: 1px solid #DEDEDE;
+}
+.packageBox .listContainer .listTitle li, .commandPagBox .listContainer .listTitle li {
+  position: relative;
+  float: left;
+  height: 49px;
+  box-sizing: border-box;
+  padding: 15px 25px;
+  border-right: 1px solid #DEDEDE;
+  background-color: #fff;
+}
+.packageBox .listContainer .listTitle li:hover, .commandPagBox .listContainer .listTitle li:hover {
+  cursor: pointer;
+  color: #C81118;
+}
+.packageBox .listContainer .listTitle .redLineTop, .commandPagBox .listContainer .listTitle .redLineTop {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: #C81118;
+}
+.packageBox .listContainer .listTitle .whiteLineBtm, .commandPagBox .listContainer .listTitle .whiteLineBtm {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  background: #fff;
+}
+.packageBox .listContainer .listInfoBox, .commandPagBox .listContainer .listInfoBox {
+  width: 100%;
+}
+.packageBox .listContainer .listInfoBox .listInfo, .commandPagBox .listContainer .listInfoBox .listInfo {
+  display: none;
+  width: 100%;
+}
+.packageBox .listInfo, .commandPagBox .listInfo {
+  font-family: "微软雅黑";
+  height: 189px;
+}
+.packageBox .infoLeft, .commandPagBox .infoLeft {
+  width: 987px;
+  padding-top: 20px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border-right: 1px solid #DEDEDE;
+  float: left;
+  height: 100%;
+}
+.packageBox .infoLeft ul, .commandPagBox .infoLeft ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.packageBox .infoLeft li, .commandPagBox .infoLeft li {
+  float: left;
+  width: 112px;
+  height: 155px;
+  margin-right: 55px;
+  text-align: center;
+  position: relative;
+  font-size: 12px;
+}
+.packageBox .infoLeft li:last-child, .commandPagBox .infoLeft li:last-child {
+  margin-right: 0px;
+}
+.packageBox .infoLeft li p, .commandPagBox .infoLeft li p {
+  width: 100%;
+  margin: 12px 0 0 0;
+}
+.packageBox .infoLeft li a, .commandPagBox .infoLeft li a {
+  color: #333;
+}
+.packageBox .infoLeft li i, .commandPagBox .infoLeft li i {
+  position: absolute;
+  right: -34px;
+  top: 49px;
+  background: url(../img/packageAddIcon.png) left top no-repeat;
+  width: 15px;
+  height: 15px;
+}
+.packageBox .infoLeft .proThumb, .commandPagBox .infoLeft .proThumb {
+  background-size: 100%;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+  border: 1px solid #DEDEDE;
+}
+.packageBox .infoRight, .commandPagBox .infoRight {
+  width: 211px;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+.packageBox .infoRight .priceBox, .commandPagBox .infoRight .priceBox {
+  text-align: center;
+}
+.packageBox .infoRight .priceBox p, .commandPagBox .infoRight .priceBox p {
+  font-size: 16px;
+  color: #C81118;
+  margin-bottom: 3px;
+}
+.packageBox .infoRight .priceBox p:first-child, .commandPagBox .infoRight .priceBox p:first-child {
+  color: #333;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.packageBox .infoRight .priceBox p:last-of-type, .commandPagBox .infoRight .priceBox p:last-of-type {
+  font-size: 12px;
+  color: #333;
+}
+.packageBox .infoRight .priceBox .addCart, .commandPagBox .infoRight .priceBox .addCart {
+  width: 124px;
+  height: 33px;
+  color: #fff;
+  line-height: 33px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #e0131b;
+}
+.packageBox .infoRight .priceBox .addCart:hover, .commandPagBox .infoRight .priceBox .addCart:hover {
+  background-color: #ec2028;
+}
+
+.commandPagBox .listContainer .listInfo {
+  height: 215px;
+}
+.commandPagBox .listContainer .listInfo .infoLeft li {
+  height: 190px;
+}
+.commandPagBox .listContainer .listInfo .infoLeft .ifCheck {
+  margin-top: 9px;
+}
+.commandPagBox .listContainer .listInfo .infoLeft .checkBox {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+  border: 1px solid #DEDEDE;
+}
+.commandPagBox .listContainer .listInfo .infoLeft .thisPrice {
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  cursor: pointer;
+  margin-left: 13px;
+  color: #C81118;
+  font-size: 14px;
+}
+.commandPagBox .listContainer .listInfo .infoLeft .huaweiPrice {
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: -9px;
+  color: #C81118;
+}
+.commandPagBox .listContainer .listInfo .infoLeft .commandChecked {
+  border: none;
+  background: url(../img/commandChecked.png) left top no-repeat;
+}
+.commandPagBox .listContainer .listInfo .infoRight .hasCombind {
+  margin-top: 30px;
+  text-decoration: none;
+}
+.commandPagBox .listContainer .listInfo .infoRight .combindPrice {
+  color: #C81118;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=details.css.map */

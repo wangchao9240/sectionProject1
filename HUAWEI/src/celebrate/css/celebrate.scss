@@ -1,0 +1,10 @@
+@charset "utf-8";
+@import "../../../dist/css/_variables.scss";
+
+@include celebrateTopNav;           //顶部菜单栏样式
+.mainImg{                           //中间荣耀狂欢夜大字样式
+    height: 472px;
+    background-image: url(../img/mainImg.jpg);
+}
+@include celebrate_container;           //设置中间放置图片内容盒子的样式
+@include celebrateFixedBox;             //设置右侧固定盒子的样式

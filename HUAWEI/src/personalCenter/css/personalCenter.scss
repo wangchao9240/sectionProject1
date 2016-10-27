@@ -1,0 +1,33 @@
+@charset "utf-8";
+@import "../../../dist/css/_variables.scss";
+//----------common---------
+@include hoverSideBar;      //设置除主页外其他页面头部的sideBar需要hover才显示的样式
+//------fixedBox-----
+@include fixedBox;
+//------fixedBox End----
+@include location;
+//--------common End--------
+
+//----personalContainer----
+.personalContainer{
+    width: $mainWidth;
+    margin: auto;
+    font-family: "微软雅黑";
+    .personalLeft{
+        @include personalLeftStyle;     //定义了左侧“我的商城”列表部分的样式
+    }
+    .personalRight{
+        width: $personalRight_width;
+        border-bottom: 1px solid $personalRightBlockBorderColor;
+        float: right;
+        @include RightTitle;        //对用户头像、标题、我的经验值、特权等样式的设置
+        .personalInfoContainer{
+            @include infoBlockTitle;        //信息块标题部分
+            @include infoBlockContainer;    //信息块内容部分
+        }
+    }
+    .recently{
+        @include recently;      //设置recently区域的样式
+    }
+}
+//----personalContainer End----

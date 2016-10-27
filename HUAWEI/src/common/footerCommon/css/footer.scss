@@ -1,0 +1,109 @@
+@charset "utf-8";
+@import "../../../../dist/css/_variables.scss";
+.footContainer{
+    width: $mainWidth;
+    margin: auto;
+    .footTop{
+        height: $footTop_height;
+        border: {
+            top:1px solid $footTop_borderColor;
+            bottom: 1px solid $footTop_borderColor;;
+        }
+        .topFourBox{
+            width: $mainWidth/4;
+            height: 100%;
+            float: left;
+            text-align: center;
+        }
+        span{
+            height: 100%;
+            display: inline-block;
+            line-height: $footTop_height;
+            color: $footTop_fontColor;
+            padding-left: 55px;
+            &:hover{
+                color: $baseRed;
+            }
+        }
+    }
+    .footMiddle{
+        padding-top: 30px;
+        box-sizing: border-box;
+        height: $footMiddle_height;
+        border-bottom: 1px solid $footTop_borderColor;
+        .serviceBox{
+            width: $mainWidth/5;
+            float: left;
+        }
+        dl{
+            margin: 0;
+        }
+        dt{
+            color: $footTop_fontColor;
+            padding-bottom: 15px;
+            font-size: 14px;
+            font-weight: normal;
+            padding-left: 25px;
+        }
+        dd{
+            font-size: 12px;
+            padding-left: 25px;
+            padding-top: 10px;
+        }
+        a{
+            color: $footMiddle_grayColor;
+            &:hover{
+                color: $baseRed;
+            }
+        }
+    }
+    .footBottom{
+        padding-right: 45px;
+        padding-top: 25px;
+        .contact{
+            font-size: 12px;
+            color: $footTop_fontColor;
+            span{
+                float: left;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                width: 755px;
+                margin: auto;
+                display: block;
+            }
+            li{
+                float: left;
+            }
+            @include footAHover;
+            .bottomLine{
+                color: #333;
+                margin: 0 5px;
+            }
+        }
+        .copyrightBox{
+            font-size: 12px;
+            margin-top: 10px;
+            color: $footTop_fontColor;
+            text-align: center;
+            @include footAHover;
+            .police{
+                display: inline-block;
+                height: 20px;
+                padding-left: 20px;
+                background: url(../img/policeIcon.png) left top no-repeat;
+            }
+        }
+        .tinyLogo{
+            display: inline-block;
+            img{
+                float: left;
+                border: 1px solid $footMiddle_grayColor;
+                border-radius: 3px;
+                margin-right: 4px;
+            }
+        }
+    }
+}

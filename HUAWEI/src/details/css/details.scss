@@ -1,0 +1,295 @@
+@charset "utf-8";
+@import "../../../dist/css/_variables.scss";
+
+@include hoverSideBar;      //设置除主页外其他页面头部的sideBar需要hover才显示的样式
+@include fixedBox;          //设置左侧固定盒子
+
+.middleBox{
+    width: $mainWidth;
+    margin: auto;
+    @include location;      //顶部网站地图位置的样式设置
+    .head{
+        font-family: "微软雅黑";
+        width: $mainWidth;
+        box-sizing: border-box;
+        min-height: 300px;
+        border: 1px solid $details_borderColor;
+        .head_left{
+            float: left;
+            width: $details_headLeftWidth;
+            @include warpStyle;     //这里规定了缩略图的样式
+            @include moveBox;       //这里规定了缩略图中跟随鼠标移动的方块样式
+            @include showBox;       //这里规定了图片放大镜显示大图的样式
+            @include thumbBox;      //图片放大假底部缩略图的样式
+        }
+//      @include handRight;             //head_right的样式合集
+        
+        .head_right{
+            @include basicHeadRight;        //这里设置了head_right的基本样式
+            .headRight_top{                     //顶部标题的样式
+                @include headRightTitle;        //顶部标题样式函数
+            }
+            .headRight_middle{                  //中部商品信息的样式
+                @include head_middle;           //中部信息样式函数
+            }
+            .headRight_bottom{                  //底部选择框的样式
+                @include basicHead_bottom;      //底部盒子基本通用样式
+    //          ----从这里往下是选择框的样式（checkBox）---
+                @include checkBox;              //选择框的样式函数
+                @include canIBuyIt;             //底部的canIBuyIt样式
+    //          ---从这里往下是选择框的样式 End--
+    //          --------右边信息框添加完毕-------
+            }
+        }
+        
+    }
+}
+.infoBoxContainer{
+    padding-top: 20px;
+    width: $mainWidth;
+    margin: auto;
+    padding-bottom: 60px;
+    .info_left{
+        width: $infoLeft_width;
+        float: left;
+        dt{
+            font-weight: normal;
+            box-sizing: border-box;
+            height: 47px;
+            line-height: 47px;
+            padding-left: 13px;
+            background-color: $infoLeft_hotTitleBgColor;
+            font-family: "微软雅黑";
+            border: 1px solid $details_borderColor;
+            .delateBtn{
+                width: 17px;
+                height: 45px;
+                margin-right: 15px;
+                float: right;
+                background: url(../img/delateBtn.png) left center no-repeat;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.6;
+                }
+            }
+        }
+        dd{
+            width: $infoLeft_width;
+            height: $infoLeft_infoHeight;
+            padding: 10px 15px;
+            position: relative;
+            border: {
+                left: 1px solid $details_borderColor;
+                right: 1px solid $details_borderColor;
+                bottom: 1px solid $details_borderColor;
+            };
+            @include hotInfo;       //信息层左侧热门榜单的样式
+            @include hotInfoArrow;      //纯CSS实现热门榜单上方小三角排名的样式
+        }
+    }
+    .info_right{
+        width: $infoRight_width;
+        float: right;
+        a{
+            color: #333;
+        }
+        .addCartBtn{                        //滚轮向下滑动时选项卡右侧出现的“加入购物车”样式
+            position: absolute;
+            top:7px;
+            right: 7px;
+            width: 126px;
+            height: 35px;
+            background-color: $baseRed;
+            line-height: 35px;
+            text-align: center;
+            color: #fff;
+            font-family: "微软雅黑";
+            &:hover{
+                cursor: pointer;
+                opacity: 0.75;
+            }
+        }
+        @include tabListStyle;          //定义了选项卡整体样式函数
+        @include tab1Style;        //选项卡1里的内容样式
+        @include tab3Style;             //选项卡3样式
+        @include tab4Style;             //选项卡4样式
+        @include tab5Style;             //选项卡5样式
+        .listContainerCloneBox{
+            margin-top: 20px;
+            border: 1px solid $details_borderColor;
+        }
+    }
+    .consultBox{
+        width: $infoRight_width;
+        float: right;
+        margin-top: 20px;
+        @include tabListStyle;          //定义了选项卡样式函数
+        @include consultTitle;          //consult盒子的标题部分右侧的a链接样式
+        @include consultStyle;          //consult盒子内容块的样式
+    }
+    .announceBox{
+        width: $infoRight_width;
+        float: right;
+        border: 1px solid $details_borderColor;
+        border-top: 0;
+        font-family: "微软雅黑";
+        @include announceStyle;         //最底部咨询盒子的样式
+    }
+}
+@include tab2Style;             //第二页选项卡的样式集合,提取出来是为了方便给底部克隆出来打选项卡加上样式
+
+//----packageBox---
+.packageBox{
+    width: $mainWidth;
+    margin: auto;
+    padding-top: 30px;
+    @include tabListStyle;
+    .listInfo{
+        font-family: "微软雅黑";
+        height: 189px;
+    }
+    .infoLeft{
+        width: 987px;
+        padding: {
+            top: 20px;
+            left: 20px;
+        };
+        box-sizing: border-box;
+        border-right: 1px solid $details_borderColor;
+        float: left;
+        height: 100%;
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 112px;
+            height: 155px;
+            margin-right: 55px;
+            text-align: center;
+            position: relative;
+            font-size: 12px;
+            &:last-child{
+                margin-right: 0px;
+            }
+            p{
+                width: 100%;
+                margin: 12px 0 0 0;
+            }
+            a{
+                color: #333;
+            }
+            i{
+                position: absolute;
+                right: -34px;
+                top: 49px;
+                background: url(../img/packageAddIcon.png) left top no-repeat;
+                width: 15px;
+                height: 15px;
+            }
+        }
+        .proThumb{
+            background-size: 100%;
+            width: 110px;
+            height: 110px;
+            cursor: pointer;
+            border: 1px solid $details_borderColor;
+        }
+    }
+    .infoRight{
+        width: 1200-989#{px};
+        height:100%;
+        float: left;
+        box-sizing: border-box;
+        padding-top: 40px;
+        .priceBox{
+            text-align: center;
+            p{
+                font-size: 16px;
+                color: $baseRed;
+                margin-bottom: 3px;
+                &:first-child{
+                    color: #333;
+                    text-decoration: line-through;
+                    font-size: 12px;
+                }
+                &:last-of-type{
+                    font-size: 12px;
+                    color: #333;
+                }
+            }
+            .addCart{
+                width: 124px;
+                height: 33px;
+                color: #fff;
+                line-height: 33px;
+                cursor: pointer;
+                display: inline-block;
+                background-color: lighten($baseRed,5%);
+                &:hover{
+                    background-color: lighten($baseRed,10%);
+                }
+            }
+        }
+    }
+}
+//---packageBox End---
+
+//---commandBox---
+.commandPagBox{
+    @extend .packageBox;
+    .listContainer{
+        .listInfo{
+            height: 215px;
+            .infoLeft{
+                li{
+                    height: 190px;
+                }
+                .ifCheck{
+                    margin-top: 9px;
+                }
+                .checkBox{
+                    display: inline-block;
+                    height: 16px;
+                    width: 16px;
+                    cursor: pointer;
+                    border: 1px solid $details_borderColor;
+                }
+                .thisPrice{
+                    display: inline-block;
+                    position: relative;
+                    top: -1px;
+                    cursor: pointer;
+                    margin-left: 13px;
+                    color: $baseRed;
+                    font-size: 14px;
+                }
+                .huaweiPrice{
+                    margin-top: 15px;
+                    font-size: 14px;
+                    text-align: center;
+                    margin-bottom: -9px;
+                    color: $baseRed;
+                }
+                .commandChecked{
+                    border: none;
+                    background: url(../img/commandChecked.png) left top no-repeat;
+                }
+            }
+            .infoRight{
+                .hasCombind{
+                    margin-top: 30px;
+                    text-decoration: none;
+                }
+                .combindPrice{
+                    color: $baseRed;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+//---commandBox---

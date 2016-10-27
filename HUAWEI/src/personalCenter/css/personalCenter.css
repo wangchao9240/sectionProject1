@@ -1,0 +1,342 @@
+@charset "UTF-8";
+.allProducts {
+  background: url(../img/listDownIcon.PNG) 220px center no-repeat;
+}
+
+.sideBarBox {
+  display: none;
+}
+
+.fixedbox {
+  width: 48px;
+  height: 170px;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 300px;
+}
+.fixedbox div {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.fixedbox .top {
+  display: none;
+  opacity: 0;
+  background: url(../img/topIcon.PNG) left top no-repeat;
+}
+.fixedbox .top:hover {
+  background: url(../img/topIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .advice {
+  background: url(../img/adviceIcon.png) left top no-repeat;
+}
+.fixedbox .advice:hover {
+  background: url(../img/adviceIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .service {
+  background: url(../img/serviceIcon.png) left top no-repeat;
+}
+.fixedbox .service:hover {
+  background: url(../img/serviceIcon_active.png) left top no-repeat;
+}
+
+.location {
+  font-size: 12px;
+  padding: 12px 0;
+}
+.location a {
+  color: #000;
+  font-size: 12px;
+}
+.location a:hover {
+  color: #C81118;
+}
+.location span {
+  padding: 0 10px;
+}
+.location p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.personalContainer {
+  width: 1200px;
+  margin: auto;
+  font-family: "微软雅黑";
+}
+.personalContainer .personalLeft {
+  width: 240px;
+  height: 770px;
+  background: #FAFAFA;
+  float: left;
+  padding: 25px 30px;
+  box-sizing: border-box;
+}
+.personalContainer .personalLeft .personalLeftTitle {
+  color: #333;
+  margin-bottom: 40px;
+  font-size: 18px;
+}
+.personalContainer .personalLeft .personalBlock {
+  margin-bottom: 30px;
+}
+.personalContainer .personalLeft .blockTitle {
+  border-top: 1px solid #DEDFDE;
+  text-align: center;
+  height: 0px;
+  margin-bottom: 25px;
+}
+.personalContainer .personalLeft .blockTitle span {
+  position: relative;
+  top: -11px;
+  padding: 0 10px;
+  background-color: #FAFAFA;
+  color: #888;
+}
+.personalContainer .personalLeft .blockList ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.personalContainer .personalLeft .blockList li {
+  display: inline-block;
+}
+.personalContainer .personalLeft .blockList a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: #333;
+}
+.personalContainer .personalLeft .blockList a:hover {
+  animation: turnRed 0.3s forwards;
+}
+@keyframes turnRed {
+  from {
+    color: #333;
+  }
+  to {
+    color: #C81118;
+  }
+}
+.personalContainer .personalLeft .blockList .num {
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  background-color: #C81118;
+  border-radius: 10px;
+  top: 4px;
+  right: -23px;
+  font-size: 12px;
+}
+.personalContainer .personalRight {
+  width: 940px;
+  border-bottom: 1px solid #F2F2F2;
+  float: right;
+}
+.personalContainer .personalRight .rightTitle {
+  height: 160px;
+  padding-top: 20px;
+  padding-left: 23px;
+}
+.personalContainer .personalRight .rightTitle .userPic {
+  float: left;
+  position: relative;
+}
+.personalContainer .personalRight .rightTitle .userPic .vipIcon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 8px;
+  right: 5px;
+}
+.personalContainer .personalRight .rightTitle .userInfo {
+  width: 780px;
+  float: right;
+}
+.personalContainer .personalRight .rightTitle .userInfo p {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.personalContainer .personalRight .rightTitle .userInfo .userSafeInfo ul {
+  position: relative;
+  top: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+}
+.personalContainer .personalRight .rightTitle .userInfo .userSafeInfo li {
+  padding-left: 12px;
+  padding-right: 15px;
+  border-right: 1px solid #DEDEDE;
+  float: left;
+}
+.personalContainer .personalRight .rightTitle .userInfo .userSafeInfo a {
+  color: #C81118;
+  display: inline-block;
+  padding: 0 3px;
+}
+.personalContainer .personalRight .rightTitle .userInfo .userSafeInfo .validate a {
+  background: url(../img/unValidate.png) left center no-repeat;
+  padding-left: 1px;
+  color: #333;
+  text-decoration: none;
+  padding-left: 22px;
+}
+.personalContainer .personalRight .rightTitle .userInfo .myPrivilege {
+  margin-top: 10px;
+}
+.personalContainer .personalRight .rightTitle .userInfo .myPrivilege .privilege {
+  display: inline-block;
+  margin-right: 7px;
+  width: 45px;
+  height: 45px;
+  background: url(../img/privilege1.png) left center no-repeat;
+}
+.personalContainer .personalRight .personalInfoContainer .infoContainerTitle {
+  padding: 0 15px;
+  background-color: #FAFAFA;
+  height: 40px;
+}
+.personalContainer .personalRight .personalInfoContainer .titleLeft {
+  float: left;
+  height: 100%;
+  line-height: 40px;
+}
+.personalContainer .personalRight .personalInfoContainer .titleLeft a {
+  color: #C81118;
+}
+.personalContainer .personalRight .personalInfoContainer .titleRight {
+  float: right;
+  height: 100%;
+  line-height: 40px;
+  color: #333;
+  text-decoration: none;
+}
+.personalContainer .personalRight .personalInfoContainer .titleRight:hover {
+  color: #C81118;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock {
+  height: 124px;
+  border-bottom: 1px solid #F2F2F2;
+  text-align: center;
+  line-height: 124px;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock > a {
+  color: #3268CC;
+  text-decoration: none;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock > a:hover {
+  color: #C81118;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock:last-child {
+  border: none;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock > div {
+  float: left;
+  border-right: 1px solid #F2F2F2;
+  box-sizing: border-box;
+  height: 100%;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock > div:last-child {
+  border-right: none;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockLeft {
+  width: 509px;
+  padding-left: 10px;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockLeft * {
+  float: left;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockLeft span {
+  height: 100%;
+  line-height: 124px;
+  margin-left: 20px;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockMiddle {
+  width: 141px;
+  text-align: center;
+  line-height: 124px;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockMiddleRight {
+  width: 111px;
+  text-align: center;
+  line-height: 124px;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockMiddleRight a {
+  color: #3268CC;
+  text-decoration: none;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockMiddleRight a:hover {
+  color: #C81118;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockRight {
+  width: 179px;
+  text-align: center;
+  line-height: 124px;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockRight span {
+  display: inline-block;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  background-color: #C81118;
+  cursor: pointer;
+}
+.personalContainer .personalRight .personalInfoContainer .personalInfoBlock .blockRight span:hover {
+  background-color: #ba1016;
+}
+.personalContainer .recently {
+  height: 420px;
+  width: 1200px;
+  float: left;
+  margin-top: 45px;
+}
+.personalContainer .recently .recentlyTitle {
+  border-bottom: 1px solid #DEDEDE;
+}
+.personalContainer .recently .recentlyTitle span {
+  padding: 10px;
+  display: inline-block;
+  border-bottom: 1px solid #333;
+  position: relative;
+  top: 1px;
+  font-size: 16px;
+}
+.personalContainer .recently .recentlyInfo {
+  width: 1064px;
+  margin: auto;
+}
+.personalContainer .recently .recentlyInfo img {
+  width: 230px;
+}
+.personalContainer .recently .recentlyInfo .recent {
+  padding-top: 20px;
+  padding-right: 48px;
+  float: left;
+  font-size: 15px;
+}
+.personalContainer .recently .recentlyInfo .recent .recentName {
+  margin-top: 20px;
+  text-align: center;
+}
+.personalContainer .recently .recentlyInfo .recent .recentName a {
+  color: #333;
+  text-decoration: none;
+}
+.personalContainer .recently .recentlyInfo .recent .recentName a:hover {
+  color: #C81118;
+}
+.personalContainer .recently .recentlyInfo .recent .recentPrice {
+  text-align: center;
+}
+
+/*# sourceMappingURL=personalCenter.css.map */

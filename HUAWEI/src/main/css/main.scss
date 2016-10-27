@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import "../../../dist/css/variables";
+//-----------foucs-----------
+.foucsBox{
+    width: 100%;
+    height: $foucsBox_height;
+    background-color: $topNavBorder;
+    position: relative;
+    @include foucsControl;          //控制小圆点的样式
+    @include foucsBoxContainer;
+    overflow: hidden;
+}
+//------------foucs End----------
+//-------middlebox-----------
+.middlebox{
+    width: $mainWidth;
+    margin: auto;
+    padding-bottom: 40px;
+    @include middleTop;             //轮播图下方6个小图标和3张图片的样式
+    .hotCommand{
+        @include hotCommand;            //热销推荐样式
+    }
+    @include middleFoucs;           //热销推荐下方轮播图样式
+}
+//-----middlebox End----------
+//------infoContainerBox-----
+.infoContainerBg{
+    width: 100%;
+    min-height: 300px;
+    background-color: $infoContainerBg;
+    .infoContainer{
+        width: $mainWidth;
+        margin: auto;
+        min-height: 200px;
+    }
+    @include infoStyle;         //这里对每一格信息框的样式进行了设置
+}
+//----infoContainerBox End----
+//--------fixedbox---------
+   @include fixedBox;
+//------fixedbox End------

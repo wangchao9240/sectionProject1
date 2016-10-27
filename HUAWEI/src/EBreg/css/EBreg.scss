@@ -1,0 +1,48 @@
+@charset "utf-8";
+@import "../../../dist/css/_variables.scss";
+
+.regHeadBg{
+    width: 100%;
+    background-color: $regHeadBg;
+    height: $regHeadHeight;
+    color: #fff;
+    font-size: 23px;
+    @include regLogo;           //顶部logo部分的样式
+}
+.containerBg{
+    background-color: $regContainerBg;
+    width: 100%;
+    .infoBox{
+        width: $regWidth;
+        margin: auto;
+        padding-top: 29px;
+        font-size: 12px;
+        @include regTitle;      //定义了顶部手机、邮箱和登录三个头部样式
+    }
+    .regInfo{
+        background-color: #fff;
+        color: $regFontColorGray;
+        padding: {
+            top: 25px;
+            left: 95px;
+            right: 95px;
+            bottom: 35px;
+        };
+        &>div{
+            padding: 25px 0;
+            font-family: verdana;
+            border-bottom: 1px solid $regBorderColor;
+        }
+        .regInfoTitle{
+            p:first-child{
+                color: #333;
+                font-weight: bold;
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+        }
+        @include regInfoBlock;          //定义了每一个行块的样式
+        @include submitBtn;         //信息层底部提交按钮样式
+    }
+    @include regfooter;         //底部各种声明、版权的样式
+}

@@ -1,0 +1,324 @@
+@charset "UTF-8";
+.topNavBg {
+  height: 36px;
+  background-color: #434343;
+  width: 100%;
+}
+.topNavBg .topNavContainer {
+  height: 100%;
+  width: 1000px;
+  margin: auto;
+}
+.topNavBg .topNavContainer ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.topNavBg .topNavContainer li {
+  float: left;
+  line-height: 36px;
+  font-size: 13px;
+  margin-right: 25px;
+}
+.topNavBg .topNavContainer li:hover > a:not(.apply) {
+  animation: aHoverWhite 0.25s forwards;
+}
+@keyframes aHoverWhite {
+  from {
+    color: #B7B7B7;
+  }
+  to {
+    color: #fff;
+  }
+}
+.topNavBg .topNavContainer li .applyDropDwon {
+  width: 100px;
+  height: 154px;
+  position: absolute;
+  z-index: 2;
+  display: none;
+  padding-bottom: 20px;
+  left: -6px;
+  top: 36px;
+  left: -19px;
+}
+.topNavBg .topNavContainer li .applyDropDwon ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.topNavBg .topNavContainer li .applyDropDwon li {
+  margin: 0;
+  width: 100%;
+}
+.topNavBg .topNavContainer li .applyDropDwon a {
+  display: block;
+}
+.topNavBg .topNavContainer a {
+  display: inline-block;
+  height: 100%;
+  color: #B7B7B7;
+  text-decoration: none;
+}
+.topNavBg .topNavContainer .applyContainer {
+  padding-right: 11px;
+  background: url(../img/topDownIcon.png) right center no-repeat;
+}
+.topNavBg .topNavContainer .applyContainer:hover {
+  background: url(../img/topUpIcon.png) right center no-repeat;
+}
+.topNavBg .topNavContainer .applyContainer:hover .applyDropDwon {
+  display: block;
+}
+.topNavBg .topNavContainer .selectLang {
+  height: 100%;
+  float: right;
+  font-size: 12px;
+  padding: 0 25px;
+  text-align: center;
+  line-height: 36px;
+  color: #B7B7B7;
+  background: url(../img/selectLang_Down.png) 106px center no-repeat;
+  position: relative;
+}
+.topNavBg .topNavContainer .selectLang:hover {
+  background: none;
+}
+.topNavBg .topNavContainer .selectLang:hover .dropDwon {
+  display: block;
+}
+.topNavBg .topNavContainer .selectLang .dropDwon {
+  width: 136px;
+  height: 118px;
+  position: absolute;
+  z-index: 2;
+  display: none;
+  padding-bottom: 20px;
+  left: -6px;
+  top: 36px;
+}
+.topNavBg .topNavContainer .selectLang .dropDwon ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.topNavBg .topNavContainer .selectLang .dropDwon li {
+  margin: 0;
+  width: 100%;
+}
+.topNavBg .topNavContainer .selectLang .dropDwon a {
+  display: block;
+}
+
+.topMenuContainer {
+  width: 100%;
+  height: 82px;
+  border-bottom: 1px solid #E7E7E7;
+  background-color: #F8F8F8;
+}
+.topMenuContainer .topMenu {
+  width: 1000px;
+  margin: auto;
+  height: 100%;
+}
+.topMenuContainer .topMenu .logo {
+  box-sizing: border-box;
+  padding-top: 20px;
+  float: left;
+  height: 100%;
+}
+.topMenuContainer .topMenu .logo a {
+  display: inline-block;
+}
+.topMenuContainer .topMenu .logo a:first-child {
+  padding-right: 20px;
+}
+.topMenuContainer .topMenu .logo a:last-child {
+  padding-left: 20px;
+  border-left: 1px solid #E7E7E7;
+}
+.topMenuContainer .topMenu .menu {
+  float: right;
+  height: 100%;
+  position: relative;
+}
+.topMenuContainer .topMenu .menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.topMenuContainer .topMenu .menu li {
+  float: left;
+  width: 70px;
+  font-size: 16px;
+  font-family: "微软雅黑";
+  line-height: 82px;
+  text-align: center;
+}
+.topMenuContainer .topMenu .menu li:first-child a {
+  color: #C81118;
+}
+.topMenuContainer .topMenu .menu a {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+.topMenuContainer .topMenu .menu .menuActive {
+  color: #C81118;
+}
+.topMenuContainer .topMenu .menu .point {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  bottom: 16px;
+  left: 33px;
+  background-color: #C81118;
+}
+
+.imgContainer {
+  width: 100%;
+  background-color: #F1F1F1;
+  height: 551px;
+  border-top: 1px solid #fff;
+}
+.imgContainer .imgCenter {
+  width: 1000px;
+  margin: auto;
+}
+.imgContainer .imgCenter .EMUI_logo {
+  background: url(../img/43a4a63aa34d91e2908affc7f3c3f162_151931vwj5ggu3gigat9gj.png) left top no-repeat;
+  width: 280px;
+  height: 54px;
+  margin: auto;
+  margin-top: 45px;
+}
+.imgContainer .imgCenter p {
+  text-align: center;
+  font-size: 24px;
+  font-family: "arial narrow";
+  margin-top: 20px;
+}
+.imgContainer .imgCenter .btnBox {
+  width: 276px;
+  height: 50px;
+  margin: auto;
+  background: url(../img/emui_3.0_cn.png) left top no-repeat;
+}
+.imgContainer .imgCenter .btnBox div {
+  width: 50%;
+  float: left;
+  line-height: 50px;
+  text-align: center;
+  font-family: "微软雅黑";
+  font-size: 16px;
+  color: #0DC3C7;
+}
+.imgContainer .imgCenter .btnBox .btnLeft:hover {
+  background-image: url(../img/emui_31_left.png);
+}
+.imgContainer .imgCenter .btnBox .btnRight:hover {
+  background-image: url(../img/emui_31_right.png);
+}
+.imgContainer .imgCenter .phoneImg {
+  background: url(../img/2ad60f977af589f9b0c7b73c0a894417_152003rumirrz3m26o8tec.png) left top no-repeat;
+  width: 1000px;
+  height: 200px;
+  margin-top: 80px;
+}
+
+.imgBtmContainer {
+  background-color: #F1F1F1;
+}
+.imgBtmContainer a {
+  color: #fff;
+}
+.imgBtmContainer a:hover {
+  color: #fff;
+}
+.imgBtmContainer .imgBox {
+  position: relative;
+  float: left;
+  height: 200px;
+  margin-right: 4px;
+}
+.imgBtmContainer .titleBox {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+.imgBtmContainer .titleBox p {
+  font-size: 12px;
+}
+.imgBtmContainer .titleBox p:first-child {
+  font-family: Helvetica,'Hiragino Sans GB','Microsoft Yahei','微软雅黑',Arial, sans-serif;
+  font-size: 16px;
+}
+
+.footer {
+  color: #7C7C7C;
+  font-size: 12px;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  background-color: #F1F1F1;
+}
+.footer a {
+  color: #7C7C7C;
+}
+.footer a:hover {
+  text-decoration: none;
+  color: #3268CC;
+}
+.footer .footCenter {
+  width: 1000px;
+  margin: auto;
+}
+.footer .footCenter .footLeft {
+  float: left;
+}
+.footer .footCenter .footLeft > * {
+  display: inline-block;
+}
+.footer .footCenter .footLeft .icon {
+  display: inline-block;
+  margin-left: 10px;
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+  width: 26px;
+  height: 22px;
+}
+.footer .footCenter .footRight {
+  float: right;
+}
+.footer .footCenter .wxf {
+  position: relative;
+}
+.footer .footCenter .wxf:hover .qrcode {
+  display: block;
+}
+.footer .footCenter .qrcode {
+  width: 154px;
+  height: 159px;
+  background: url(../img/wxf.png) left top no-repeat;
+  position: absolute;
+  top: -168px;
+  left: -63px;
+  display: none;
+}
+.footer span {
+  height: 11px;
+  padding-right: 8px;
+  margin-left: 8px;
+  border-left: 1px solid #7C7C7C;
+  position: relative;
+  top: 1px;
+}
+
+/*# sourceMappingURL=EMUI.css.map */

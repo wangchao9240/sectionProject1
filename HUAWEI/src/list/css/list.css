@@ -1,0 +1,244 @@
+@charset "UTF-8";
+.allProducts {
+  background: url(../img/listDownIcon.PNG) 220px center no-repeat;
+}
+
+.sideBarBox {
+  display: none;
+}
+
+.listContainer {
+  width: 1200px;
+  margin: auto;
+  font-size: 12px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  padding: 0;
+}
+.listContainer .location {
+  font-size: 12px;
+  padding: 12px 0;
+}
+.listContainer .location a {
+  color: #000;
+  font-size: 12px;
+}
+.listContainer .location a:hover {
+  color: #C81118;
+}
+.listContainer .location span {
+  padding: 0 10px;
+}
+.listContainer .location p {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+.listContainer .classify {
+  width: 1200px;
+  margin: auto;
+  height: 50px;
+  padding: 15px 0 15px 50px;
+  box-sizing: border-box;
+  border: 1px solid #DEDEDE;
+}
+.listContainer .classify dt {
+  font-weight: normal;
+  float: left;
+  padding-right: 10px;
+}
+.listContainer .classify dd {
+  float: left;
+  padding-right: 15px;
+}
+.listContainer .classify dd a {
+  color: #999;
+  display: inline-block;
+}
+.listContainer .classify dd a:hover {
+  text-decoration: none;
+  color: #333;
+}
+.listContainer > p {
+  font-size: 24px;
+  font-family: "微软雅黑";
+}
+.listContainer .commandBox {
+  box-sizing: border-box;
+  float: left;
+  width: 224px;
+  height: 333px;
+}
+.listContainer .commandBox a:hover {
+  text-decoration: none;
+}
+.listContainer .commandBox .proIcon {
+  font-size: 12px;
+  color: #FFF;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 18px;
+}
+.listContainer .productContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.listContainer .productContainer .titlebox {
+  position: absolute;
+  bottom: 15px;
+}
+.listContainer .productContainer img {
+  display: block;
+  margin: 0px auto 25px auto;
+  padding-top: 45px;
+}
+.listContainer .productContainer .title {
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
+.listContainer .productContainer .supTitle {
+  font-size: 12px;
+  text-align: center;
+  color: #B0B0B0;
+}
+.listContainer .productContainer .proPrice {
+  text-align: center;
+  color: #C81118;
+}
+.listContainer .commandBox {
+  float: none;
+}
+.listContainer .commandBox .productContainer img {
+  width: 180px;
+}
+.listContainer .commandBox .productContainer .title {
+  font-size: 12px;
+}
+.listContainer .commandBox .productContainer .title:hover {
+  text-decoration: underline;
+  color: #C81118;
+}
+.listContainer .commandBox .productContainer .titlebox {
+  width: 185px;
+  bottom: 30px;
+  height: 65px;
+}
+.listContainer .commandBox .productContainer .proPrice {
+  font-size: 18px;
+  margin-top: 40px;
+}
+.listContainer .infoBlock {
+  margin-top: 20px;
+  width: 224px;
+  border: 1px solid #DEDEDE;
+  float: left;
+}
+.listContainer .infoBlock:hover {
+  border: 1px solid #C81118;
+}
+.listContainer .infoBlock .redFont {
+  color: #C81118;
+}
+.listContainer .infoBlock .infoButtonBox div {
+  width: 50%;
+  height: 31px;
+  box-sizing: border-box;
+  line-height: 31px;
+  text-align: center;
+  border-top: 1px solid #DEDEDE;
+  float: left;
+}
+.listContainer .infoBlock .infoButtonBox .buy {
+  color: #C81118;
+  cursor: pointer;
+  border-right: 1px solid #DEDEDE;
+}
+.listContainer .infoBlock .infoButtonBox .buy:hover {
+  background-color: #C81118;
+  color: #fff;
+}
+.listContainer .pagesContainer {
+  float: right;
+  padding: 40px 0;
+}
+.listContainer .pagesContainer div, .listContainer .pagesContainer a {
+  margin-left: 8px;
+}
+.listContainer .pagesContainer .pagesChange {
+  border: 1px solid #DEDEDE;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.listContainer .pagesContainer .pagesChange:hover {
+  border: 1px solid #c5c5c5;
+}
+.listContainer .pagesContainer ul {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  list-style: none;
+}
+.listContainer .pagesContainer ul a {
+  float: left;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+.listContainer .pagesContainer ul a:first-child {
+  color: #C81118;
+}
+.listContainer .pagesContainer li {
+  padding: 0;
+}
+.listContainer .pagesContainer a {
+  color: #000;
+  font-size: 12px;
+}
+.listContainer .pagesContainer a:hover {
+  color: #C81118;
+}
+
+.fixedbox {
+  width: 48px;
+  height: 170px;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 300px;
+}
+.fixedbox div {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.fixedbox .top {
+  display: none;
+  opacity: 0;
+  background: url(../img/topIcon.PNG) left top no-repeat;
+}
+.fixedbox .top:hover {
+  background: url(../img/topIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .advice {
+  background: url(../img/adviceIcon.png) left top no-repeat;
+}
+.fixedbox .advice:hover {
+  background: url(../img/adviceIcon_active.PNG) left top no-repeat;
+}
+.fixedbox .service {
+  background: url(../img/serviceIcon.png) left top no-repeat;
+}
+.fixedbox .service:hover {
+  background: url(../img/serviceIcon_active.png) left top no-repeat;
+}
+
+/*# sourceMappingURL=list.css.map */

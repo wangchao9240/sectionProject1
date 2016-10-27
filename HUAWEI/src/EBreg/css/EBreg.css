@@ -1,0 +1,221 @@
+.regHeadBg {
+  width: 100%;
+  background-color: #333;
+  height: 67px;
+  color: #fff;
+  font-size: 23px;
+}
+.regHeadBg .regLogoBox {
+  width: 1200px;
+  margin: auto;
+  height: 67px;
+  line-height: 67px;
+  padding-left: 165px;
+  background: url(../img/logo2.png) left center no-repeat;
+}
+.regHeadBg .regLogoBox span {
+  margin: 0 7px;
+  display: inline-block;
+}
+.regHeadBg .regLogoBox span:last-child {
+  vertical-align: middle;
+  padding-top: 3px;
+}
+
+.containerBg {
+  background-color: #F7F7F7;
+  width: 100%;
+}
+.containerBg .infoBox {
+  width: 1000px;
+  margin: auto;
+  padding-top: 29px;
+  font-size: 12px;
+}
+.containerBg .infoBox .regTitle > div {
+  padding-top: 7px;
+  text-align: center;
+  width: 145px;
+  height: 32px;
+  display: inline-block;
+  margin-right: 4px;
+  box-sizing: border-box;
+}
+.containerBg .infoBox .phoneNum {
+  background: url(../img/phoneIcon.png) 12px center no-repeat;
+  background-color: #EB1C24;
+  cursor: pointer;
+}
+.containerBg .infoBox .phoneNum a {
+  color: #fff;
+}
+.containerBg .infoBox .email {
+  background: url(../img/mailIcon.png) 12px center no-repeat;
+  background-color: #999;
+  cursor: pointer;
+}
+.containerBg .infoBox .email a {
+  color: #fff;
+}
+.containerBg .infoBox .log {
+  float: right;
+}
+.containerBg .infoBox .log a {
+  color: #C81118;
+}
+.containerBg .regInfo {
+  background-color: #fff;
+  color: #999;
+  padding-top: 25px;
+  padding-left: 95px;
+  padding-right: 95px;
+  padding-bottom: 35px;
+}
+.containerBg .regInfo > div {
+  padding: 25px 0;
+  font-family: verdana;
+  border-bottom: 1px solid #E0E0E0;
+}
+.containerBg .regInfo .regInfoTitle p:first-child {
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.containerBg .regInfo .regInfoBlock .blockTitle {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.containerBg .regInfo .regInfoBlock .regInfoLine {
+  margin-top: 25px;
+}
+.containerBg .regInfo .regInfoBlock .infoBlockTips {
+  margin: 0;
+}
+.containerBg .regInfo .regInfoBlock .infoBlockTips a {
+  color: #00C0F4;
+  text-decoration: underline;
+}
+.containerBg .regInfo .regInfoBlock .regInfoLine > div {
+  display: inline-block;
+}
+.containerBg .regInfo .regInfoBlock .lineLeft {
+  width: 140px;
+  float: left;
+  height: 34px;
+  line-height: 34px;
+  vertical-align: text-bottom;
+}
+.containerBg .regInfo .regInfoBlock .lineRight {
+  width: 335px;
+}
+.containerBg .regInfo .regInfoBlock .lineRight > *:first-child {
+  float: left;
+}
+.containerBg .regInfo .regInfoBlock .lineRight > *:last-child {
+  float: right;
+}
+.containerBg .regInfo .regInfoBlock .lineRight div {
+  display: inline-block;
+  height: 34px;
+  line-height: 34px;
+  border: 1px solid #E0E0E0;
+  color: #333;
+  box-sizing: border-box;
+}
+.containerBg .regInfo .regInfoBlock .lineRight input {
+  outline: none;
+  width: 161px;
+  padding-left: 15px;
+  height: 34px;
+  border: 1px solid #E0E0E0;
+  color: #333;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .area {
+  position: relative;
+  width: 161px;
+  padding-left: 10px;
+  background: url(../img/regDownArrow.png) 135px center no-repeat;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .identifyingCode {
+  color: #333;
+  width: 161px;
+  text-align: center;
+  background-color: #F2F2F2;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .identifyingCode:hover {
+  cursor: pointer;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .password, .containerBg .regInfo .regInfoBlock .lineRight .confirm, .containerBg .regInfo .regInfoBlock .lineRight .Email, .containerBg .regInfo .regInfoBlock .lineRight #password, .containerBg .regInfo .regInfoBlock .lineRight #confirm, .containerBg .regInfo .regInfoBlock .lineRight #Email {
+  width: 100%;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .Phonenum {
+  float: right;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .Email {
+  display: none;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .passWordstrength {
+  margin-top: 3px;
+  border: none;
+  height: auto;
+  float: left;
+}
+.containerBg .regInfo .regInfoBlock .lineRight .passWordstrength .strength {
+  width: 80px;
+  height: 16px;
+  border: none;
+  line-height: 14px;
+  text-align: center;
+  color: #999;
+  float: left;
+  margin-right: 1px;
+  background-color: #F7F7F7;
+}
+.containerBg .regInfo .btnContainer {
+  text-align: center;
+  border-bottom: none;
+}
+.containerBg .regInfo .regBtnSpan {
+  display: inline-block;
+}
+.containerBg .regInfo .regBtnSpan .regbtn {
+  width: 277px;
+  height: 43px;
+  color: #fff;
+  line-height: 43px;
+  border: 1px solid #E0E0E0;
+  background-color: #C81118;
+  display: block;
+  outline: none;
+}
+.containerBg .regFooter {
+  padding-top: 30px;
+  width: 1000px;
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  border-top: 1px solid #E0E0E0;
+}
+.containerBg .regFooter div:last-child {
+  color: #999;
+  font-size: 12px;
+  margin-top: 10px;
+  padding-bottom: 35px;
+}
+.containerBg .regFooter span {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #999;
+}
+.containerBg .regFooter a {
+  color: #999;
+  text-decoration: underline;
+}
+.containerBg .regFooter a:first-child {
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=EBreg.css.map */

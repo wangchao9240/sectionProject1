@@ -1,0 +1,588 @@
+@charset "UTF-8";
+.topNav_left .arrow, .topNav_right .arrow {
+  width: 7px;
+  height: 4px;
+  background: url(../img/arrowicon.png) no-repeat left top;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.topNavBg {
+  width: 100%;
+  border: 1px solid #EDEDED;
+  height: 30px;
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.topNavBg .topNav {
+  width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+
+.topNav_left {
+  position: relative;
+  float: left;
+  font-size: 12px;
+}
+.topNav_left .topNav_dropMenu {
+  display: none;
+  width: 87px;
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px #EDEDED;
+  top: -5px;
+  left: 130px;
+  z-index: 2;
+}
+.topNav_left .topNav_dropMenu li {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.topNav_left .topNav_dropMenu li:first-child {
+  margin-bottom: 10px;
+}
+.topNav_left ul {
+  padding: 0;
+  margin: 0;
+}
+.topNav_left li {
+  float: left;
+  list-style: none;
+}
+.topNav_left a {
+  color: #8C8C8C;
+}
+.topNav_left a:hover {
+  color: #C81118;
+  text-decoration: none;
+}
+.topNav_left .topNavLeftLine {
+  padding: 0 10px;
+  color: #bfbfbf;
+  float: left;
+}
+
+.topNav_right {
+  float: right;
+  font-size: 12px;
+  position: relative;
+}
+.topNav_right ul {
+  padding: 0;
+  margin: 0;
+}
+.topNav_right li {
+  float: left;
+  list-style: none;
+}
+.topNav_right a {
+  color: #8C8C8C;
+}
+.topNav_right a:hover {
+  color: #C81118;
+  text-decoration: none;
+}
+.topNav_right .topNavLeftLine {
+  padding: 0 10px;
+  color: #bfbfbf;
+  float: left;
+}
+.topNav_right .log a {
+  color: #000;
+}
+.topNav_right .log a:first-child {
+  margin-right: 10px;
+}
+.topNav_right .log a:hover {
+  color: #C81118;
+}
+.topNav_right .topNav_dropMenu {
+  display: none;
+  width: 87px;
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+  padding-left: 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px #EDEDED;
+  top: -5px;
+  left: 285px;
+  z-index: 2;
+}
+.topNav_right .topNav_dropMenu li {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+.topNav_right .topNav_dropMenu li:first-child {
+  margin-bottom: 10px;
+}
+
+.searchBox {
+  width: 1200px;
+  height: 118px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.searchBox .search {
+  position: relative;
+}
+.searchBox a {
+  display: inline-block;
+}
+.searchBox .searchIpt {
+  width: 395px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #EDEDED;
+  outline: none;
+  padding-left: 10px;
+}
+.searchBox .iptsut {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  top: 10px;
+  font-size: 14px;
+}
+.searchBox .iptsut li {
+  float: left;
+  margin-right: 10px;
+}
+.searchBox .iptsut a {
+  color: #949494;
+}
+.searchBox .iptsut a:hover {
+  text-decoration: none;
+  color: #545454;
+}
+.searchBox .searchIcon {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 409px;
+  top: 0;
+  background: url(../img/searchIcon.png) left top no-repeat;
+}
+.searchBox .searchIcon:hover {
+  cursor: pointer;
+  background: url(../img/searchIcon_active.png) left top no-repeat;
+}
+.searchBox .my_cart {
+  box-sizing: border-box;
+  width: 199px;
+  height: 40px;
+  border: 1px solid #EDEDED;
+  display: inline-block;
+  right: 0px;
+  position: absolute;
+}
+.searchBox .my_cart .mall, .searchBox .my_cart .cart {
+  float: left;
+  width: 49.5%;
+  height: 100%;
+  text-align: center;
+  line-height: 2.8;
+  background: url(../img/mycart_top.png) 83px 18px no-repeat;
+  background-color: #fff;
+}
+.searchBox .my_cart .mall:hover, .searchBox .my_cart .cart:hover {
+  cursor: pointer;
+  height: 102%;
+  background: url(../img/mycart_down.png) 83px 18px no-repeat;
+  background-color: #fff;
+}
+.searchBox .my_cart .cartLine {
+  float: left;
+  height: 12px;
+  border-left: 1px solid #EDEDED;
+  margin-top: 12px;
+}
+.searchBox .my_cart a {
+  color: #000;
+  font-size: 12px;
+}
+.searchBox .my_cart a:hover {
+  color: #C81118;
+}
+.searchBox .my_cart .cart_arrow:after {
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 0;
+  left: 100%;
+  margin-left: -10px;
+  content: " ";
+  border-top: 4px solid #C81118;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+.searchBox .my_cart .mall_dropDown {
+  z-index: 2;
+  background-color: #fff;
+  left: -1px;
+  display: none;
+  position: absolute;
+  width: 199px;
+  box-sizing: border-box;
+  border-left: 1px solid #EDEDED;
+  border-right: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED;
+  top: 39px;
+  font-size: 12px;
+}
+.searchBox .my_cart .mall_dropDown .drop_logbox p {
+  height: 40px;
+  box-sizing: border-box;
+  padding-top: 12px;
+  text-align: center;
+  border-bottom: 1px solid #EDEDED;
+}
+.searchBox .my_cart .mall_dropDown .drop_log {
+  margin-left: 7px;
+}
+.searchBox .my_cart .mall_dropDown .drop_log .log_line {
+  margin: 0 5px;
+}
+.searchBox .my_cart .mall_dropDown .drop_logUl {
+  padding: 20px;
+  padding-bottom: 5px;
+}
+.searchBox .my_cart .mall_dropDown .drop_logUl ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.searchBox .my_cart .mall_dropDown .drop_logUl ul li {
+  float: left;
+  width: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.searchBox .my_cart .mall_dropDown .drop_logAds {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.searchBox .my_cart .drop_cartbox {
+  z-index: 2;
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  width: 510px;
+  box-sizing: border-box;
+  border-left: 1px solid #EDEDED;
+  border-right: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED;
+  top: 39px;
+  font-size: 12px;
+  right: -1px;
+  min-height: 110px;
+  border-top: 1px solid #EDEDED;
+  top: 38px;
+}
+.searchBox .my_cart .drop_cartInfo {
+  padding: 15px 20px;
+}
+.searchBox .my_cart .drop_cartInfo .col-xs-8 {
+  margin-left: -25px;
+}
+.searchBox .my_cart .drop_cartInfo .col-xs-8 a {
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+.searchBox .my_cart .drop_cartInfo .cartPrice {
+  font-size: 13px;
+  color: #949494;
+}
+.searchBox .my_cart .drop_cartInfo .cart_price {
+  color: #C81118;
+  font-size: 12px;
+}
+.searchBox .my_cart .drop_cartInfo .col-xs-1 {
+  color: #949494;
+  font-size: 30px;
+  height: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.searchBox .my_cart .drop_cartPrice {
+  background-color: #FAFAFA;
+  padding: 20px;
+}
+.searchBox .my_cart .drop_cartPrice .row {
+  margin: 0;
+}
+.searchBox .my_cart .drop_cartPrice .drop_cartPay {
+  cursor: pointer;
+  background-color: #C81118;
+  color: #fff;
+  width: 132px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  float: right;
+  font-size: 16px;
+  font-family: "微软雅黑";
+}
+.searchBox .my_cart .drop_cartPrice .drop_cartPay:hover {
+  background-color: #ee373e;
+}
+.searchBox .my_cart .drop_cartPrice p {
+  height: 37px;
+  line-height: 37px;
+  float: left;
+  margin: 0;
+}
+.searchBox .my_cart .drop_cartPrice .drop_cartCount, .searchBox .my_cart .drop_cartPrice .drop_cartMoney {
+  color: #C81118;
+  font-size: 16px;
+  font-weight: bold;
+}
+.searchBox .qrcodeBox {
+  position: relative;
+  padding-top: 20px;
+  font-size: 12px;
+  padding-left: 73px;
+}
+.searchBox .qrcodeBox img {
+  display: block;
+}
+.searchBox .qrcodeBox a {
+  color: #545454;
+}
+.searchBox .qrcodeBox a:hover {
+  text-decoration: none;
+  color: #545454;
+}
+.searchBox .qrcodeBox .qrcode {
+  display: none;
+  opacity: 0;
+}
+.searchBox .qrcodeBox .qrcode_control {
+  position: absolute;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #6e6e6e;
+  border-radius: 30px;
+}
+.searchBox .qrcodeBox .qrcode_active {
+  background-color: #C81118;
+}
+.searchBox .drop_cartIcon {
+  display: inline-block;
+  background: url(../img/drop_cartIcon.PNG) left center no-repeat;
+  height: 28px;
+  line-height: 28px;
+  padding-left: 42px;
+  color: #878787;
+}
+
+.Navbox {
+  width: 100%;
+  height: 40px;
+  background-color: #333;
+}
+.Navbox .NavContainer {
+  width: 1200px;
+  margin: auto;
+  font-size: 14px;
+}
+.Navbox .NavContainer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.Navbox .NavContainer li {
+  float: left;
+  width: 116px;
+  height: 40px;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+  line-height: 40px;
+  cursor: pointer;
+}
+.Navbox .NavContainer li:hover {
+  background-color: black;
+}
+.Navbox .NavContainer .hotIcon {
+  width: 30px;
+  height: 13px;
+  border-radius: 3px;
+  background-color: #FC3784;
+  position: absolute;
+  color: #fff;
+  top: -8px;
+  font-size: 12px;
+  line-height: 13px;
+  right: 13px;
+}
+.Navbox .NavContainer .hotIcon:after {
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 0;
+  left: 100%;
+  margin-left: -13px;
+  content: " ";
+  border-top: 4px solid #FC3784;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+.Navbox .NavContainer .newIcon {
+  width: 30px;
+  height: 13px;
+  border-radius: 3px;
+  background-color: #24CA43;
+  position: absolute;
+  color: #fff;
+  top: -8px;
+  font-size: 12px;
+  line-height: 13px;
+  right: 13px;
+}
+.Navbox .NavContainer .newIcon:after {
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 0;
+  left: 100%;
+  margin-left: -13px;
+  content: " ";
+  border-top: 4px solid #24CA43;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+.Navbox .allProducts {
+  float: left;
+  width: 240px;
+  height: 40px;
+  background-color: #C81118;
+  box-sizing: border-box;
+  padding-left: 13px;
+  line-height: 40px;
+  color: #fff;
+}
+.Navbox .sideBarBox {
+  font-family: "微软雅黑";
+  width: 240px;
+  height: 448px;
+  position: absolute;
+}
+.Navbox .sideBarBox .sideBarContainer {
+  display: none;
+  width: 240px;
+  height: 448px;
+  background-color: #F7F7F7;
+  position: absolute;
+  left: 240px;
+  top: 0;
+  padding: 15px 0;
+}
+.Navbox .sideBarBox .sideBarContainer .sideBar_info2 {
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+.Navbox .sideBarBox .sideBarContainer .sideBar_info2 a {
+  color: #000;
+  font-size: 14px;
+}
+.Navbox .sideBarBox .sideBarContainer .sideBar_info2 a:hover {
+  color: #C81118;
+}
+.Navbox .sideBarBox .sideBarContainer .sideBar_info2 a:hover {
+  text-decoration: none;
+}
+.Navbox .sideBarBox .sideBarContainer .sideBar_info2:hover {
+  background-color: #dedede;
+}
+.Navbox .sideBarBox .sideBar_command {
+  margin: 0 25px;
+  border-top: 1px solid lightgray;
+  text-align: center;
+}
+.Navbox .sideBarBox .sideBar_command span {
+  padding: 0 10px;
+  position: relative;
+  color: #bababa;
+  top: -10px;
+  background-color: #F7F7F7;
+}
+.Navbox .sideBarBox .sideBar_command a {
+  color: #000;
+  font-size: 14px;
+}
+.Navbox .sideBarBox .sideBar_command a:hover {
+  color: #C81118;
+}
+.Navbox .sideBarBox .sideBar_command a {
+  display: block;
+  text-align: left;
+  margin-bottom: 12px;
+}
+.Navbox .sideBarBox .sideBar_command a:hover {
+  text-decoration: none;
+}
+.Navbox .sideBar {
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 10px;
+  background-color: #fff;
+}
+.Navbox .sideBar a {
+  color: #000;
+  font-size: 14px;
+}
+.Navbox .sideBar a:hover {
+  color: #C81118;
+}
+.Navbox .sideBar a:hover {
+  text-decoration: none;
+}
+.Navbox .sideBar:hover {
+  background-color: #F7F7F7;
+}
+.Navbox .sideBarInfo {
+  padding-top: 5px;
+}
+.Navbox .sideBarInfo a {
+  color: #a1a1a1;
+  display: inline-block;
+  margin-right: 10px;
+}
+.Navbox .sideBarHotIcon {
+  width: 11px;
+  height: 11px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 11px;
+  text-align: center;
+  background-color: #EA7433;
+  box-shadow: 2px 2px 3px #EDEDED;
+  top: -10px;
+  right: -10px;
+}
+.Navbox .sideBarHotIcon:after {
+  position: absolute;
+  bottom: -4px;
+  width: 0;
+  height: 0;
+  left: 100%;
+  margin-left: -10px;
+  content: " ";
+  border-top: 4px solid #EA7433;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+/*# sourceMappingURL=head.css.map */
